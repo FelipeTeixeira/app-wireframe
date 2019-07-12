@@ -75,7 +75,6 @@ refer to http://docs.nativescript.org/ui/theme.
     width: 70;
     height: 70;
     border-radius: 4;
-    margin-right: 8;
 }
 
 /* QTY */
@@ -189,6 +188,6 @@ refer to http://docs.nativescript.org/ui/theme.
     padding: 12 24;
 }
 
-.card-info {
-    flex: 1;
+.btn-trash {
+    width: 14;
 }
