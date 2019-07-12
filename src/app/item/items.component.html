@@ -21,22 +21,23 @@
 
         <StackLayout class="card address">
 
+
             <FlexboxLayout alignItems="center" class="store">
                 <Image src="https://cdn.wiboo.io/Imageb4bb3f4e-26bd-4817-9c5a-cb752e6bdf05" stretch="fill" class="store-logo"></Image>
                 <Label text="Portal da Villa Bar e Choperia" class="store-name"></Label>
             </FlexboxLayout>
 
-            <Label text="Endereço de Retirada" class="address-label"></Label>
+            <Label text="Endereço de Retirada:" class="address-label"></Label>
+
             <FlexboxLayout alignItems="center" justifyContent="space-between">
 
-                <FlexboxLayout flexDirection="column">
-                    <Label text="Av. Cassiano Ricardo, 1800 - Jardim Alvorada, São José dos Campos - SP, 12246-870"
-                        textWrap="true"></Label>
-                </FlexboxLayout>
+                <Label
+                    width="80%"
+                    text="Av. Cassiano Ricardo, 1800 - Jardim Alvorada, São José dos Campos - SP, 12246-870"
+                    textWrap="true" class="address-location">
+                </Label>
 
-                <StackLayout class="address-icon" width="100">
-                    <!-- <Image src="res://map_location" stretch="none"></Image> -->
-                </StackLayout>
+                <Image src="res://map_location" class="address-icon" stretch="fill"></Image>
 
             </FlexboxLayout>
         </StackLayout>
@@ -61,6 +62,7 @@
         </StackLayout>
 
         <StackLayout class="card" marginTop="12">
+
             <FlexboxLayout class="summary">
                 <Label text="Custo dos produtos"></Label>
                 <Label text="R$ 2,79" class="summary-value"></Label>
@@ -74,7 +76,7 @@
             <FlexboxLayout class="summary summary-total">
                 <FlexboxLayout flexDirection="column">
                     <Label text="Valor total" class="black"></Label>
-                    <Label text="Com dinheiro" class="summary-money"></Label>
+                    <Label text="Restante a pagar" class="summary-money"></Label>
                 </FlexboxLayout>
                 <Label text="R$ 28,79" class="black summary-value summary-total-value"></Label>
             </FlexboxLayout>
