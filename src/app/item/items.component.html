@@ -4,38 +4,61 @@
 <ScrollView class="page" *ngIf="!loading">
     <StackLayout flexDirection="column">
 
-        <FlexboxLayout alignItems="flex-start" marginTop="12" marginLeft="12">
-            <FlexboxLayout class="tabStore tabStore-is-active" alignItems="center">
-                <Label text="Vila do Chop"></Label>
+        <StackLayout class="tabStore card">
+
+            <ScrollView orientation="horizontal">
+                <FlexboxLayout class="tabStore-container">
+                    <FlexboxLayout class="tabStore-item tabStore-item-is-active" alignItems="center">
+                        <Label text="Portal da Villa Choperia"></Label>
+                    </FlexboxLayout>
+                    <FlexboxLayout class="tabStore-item" alignItems="center">
+                        <Label text="Vila do Chop"></Label>
+                    </FlexboxLayout>
+                </FlexboxLayout>
+            </ScrollView>
+
+        </StackLayout>
+
+        <StackLayout class="card address">
+
+            <FlexboxLayout alignItems="center" class="store">
+                <Image src="https://cdn.wiboo.io/Imageb4bb3f4e-26bd-4817-9c5a-cb752e6bdf05" stretch="fill" class="store-logo"></Image>
+                <Label text="Portal da Villa Bar e Choperia" class="store-name"></Label>
             </FlexboxLayout>
-            <FlexboxLayout class="tabStore" alignItems="center">
-                <Label text="Vila do Chop"></Label>
-            </FlexboxLayout>
-        </FlexboxLayout>
 
-        <FlexboxLayout alignItems="center" class="address">
+            <Label text="Endereço de Retirada" class="address-label"></Label>
+            <FlexboxLayout alignItems="center" justifyContent="space-between">
 
-            <Image src="res://icon" stretch="none"></Image>
-
-            <Label text="Endereço de Retirada"></Label>
-        </FlexboxLayout>
-
-
-        <FlexboxLayout alignItems="flex-start" class="card" *ngFor="let item of items">
-
-            <Image [src]="item.img" class="img" stretch="fill"></Image>
-            <StackLayout>
-                <Label [text]="item.name" class="card-name"></Label>
-                <Label [text]="item.price" class="card-price"></Label>
-
-                <FlexboxLayout alignItems="center">
-                    <Button text="-" class="qty-btn" verticalAlignment="center"></Button>
-                    <Label text="2" class="qty-total"></Label>
-                    <Button text="+" class="qty-btn" verticalAlignment="center"></Button>
+                <FlexboxLayout flexDirection="column">
+                    <Label text="Av. Cassiano Ricardo, 1800 - Jardim Alvorada, São José dos Campos - SP, 12246-870"
+                        textWrap="true"></Label>
                 </FlexboxLayout>
 
-            </StackLayout>
-        </FlexboxLayout>
+                <StackLayout class="address-icon" width="100">
+                    <!-- <Image src="res://map_location" stretch="none"></Image> -->
+                </StackLayout>
+
+            </FlexboxLayout>
+        </StackLayout>
+
+        <StackLayout class="card" marginTop="12" padding="0">
+
+            <FlexboxLayout alignItems="flex-start" class="product" *ngFor="let item of items">
+
+                <Image [src]="item.img" class="img" stretch="fill"></Image>
+                <StackLayout>
+                    <Label [text]="item.name" class="card-name"></Label>
+                    <Label [text]="item.price" class="card-price"></Label>
+
+                    <FlexboxLayout alignItems="center">
+                        <Button text="-" class="qty-btn" verticalAlignment="center"></Button>
+                        <Label text="2" class="qty-total"></Label>
+                        <Button text="+" class="qty-btn" verticalAlignment="center"></Button>
+                    </FlexboxLayout>
+
+                </StackLayout>
+            </FlexboxLayout>
+        </StackLayout>
 
     </StackLayout>
 </ScrollView>
