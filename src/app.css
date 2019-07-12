@@ -189,7 +189,6 @@ refer to http://docs.nativescript.org/ui/theme.
     padding: 12 24;
 }
 
-.tile {
-    background-color: red;
-    margin: 2;
+.card-info {
+    flex: 1;
 }

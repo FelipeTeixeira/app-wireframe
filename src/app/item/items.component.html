@@ -21,25 +21,26 @@
 
         <StackLayout class="card address">
 
-
             <FlexboxLayout alignItems="center" class="store">
                 <Image src="https://cdn.wiboo.io/Imageb4bb3f4e-26bd-4817-9c5a-cb752e6bdf05" stretch="fill" class="store-logo"></Image>
                 <Label text="Portal da Villa Bar e Choperia" class="store-name"></Label>
             </FlexboxLayout>
 
             <Label text="Endereço de Retirada:" class="address-label"></Label>
+            <GridLayout columns="*, auto" rows="auto">
 
-            <FlexboxLayout alignItems="center" justifyContent="space-between">
+                <StackLayout col="0" row="0" verticalAlignment="center">
+                    <StackLayout orientation="horizontal">
+                        <Label
+                            text="Av. Cassiano Ricardo, 1800 - Jardim Alvorada, São José dos Campos - SP, 12246-870"
+                            textWrap="true" class="address-location">
+                        </Label>
+                    </StackLayout>
+                </StackLayout>
 
-                <Label
-                    width="80%"
-                    text="Av. Cassiano Ricardo, 1800 - Jardim Alvorada, São José dos Campos - SP, 12246-870"
-                    textWrap="true" class="address-location">
-                </Label>
+                <Image col="1" row="0" src="res://map_location" class="address-icon" stretch="fill"></Image>
+            </GridLayout>
 
-                <Image src="res://map_location" class="address-icon" stretch="fill"></Image>
-
-            </FlexboxLayout>
         </StackLayout>
 
         <StackLayout class="card" marginTop="12" padding="0">
@@ -47,8 +48,15 @@
             <FlexboxLayout alignItems="flex-start" class="product" *ngFor="let item of items">
 
                 <Image [src]="item.img" class="img" stretch="fill"></Image>
-                <StackLayout>
-                    <Label [text]="item.name" class="card-name"></Label>
+
+                <StackLayout class="card-info" background="red">
+
+                    <Label [text]="item.name" textWrap="true" class="card-name"></Label>
+
+                    <StackLayout width="16" height="16">
+                        <Image src="res://trash" stretch="fill"></Image>
+                    </StackLayout>
+
                     <Label [text]="item.price" class="card-price"></Label>
 
                     <FlexboxLayout alignItems="center">
@@ -92,7 +100,6 @@
 
 <!--
     - falta botao de excluir
-    - imagem map de endereço
     - seleciona a forma de pagamento
     - alinhar dinheiro para direita dentro do card
 
