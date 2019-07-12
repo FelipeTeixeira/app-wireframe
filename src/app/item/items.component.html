@@ -1,0 +1,41 @@
+<ActionBar title="Carrinho" class="action-bar">
+</ActionBar>
+
+<ScrollView class="page" *ngIf="!loading">
+    <StackLayout flexDirection="column">
+
+        <FlexboxLayout alignItems="flex-start" marginTop="12" marginLeft="12">
+            <FlexboxLayout class="tabStore tabStore-is-active" alignItems="center">
+                <Label text="Vila do Chop"></Label>
+            </FlexboxLayout>
+            <FlexboxLayout class="tabStore" alignItems="center">
+                <Label text="Vila do Chop"></Label>
+            </FlexboxLayout>
+        </FlexboxLayout>
+
+        <FlexboxLayout alignItems="center" class="address">
+
+            <Image src="res://icon" stretch="none"></Image>
+
+            <Label text="Endereço de Retirada"></Label>
+        </FlexboxLayout>
+
+
+        <FlexboxLayout alignItems="flex-start" class="card" *ngFor="let item of items">
+
+            <Image [src]="item.img" class="img" stretch="fill"></Image>
+            <StackLayout>
+                <Label [text]="item.name" class="card-name"></Label>
+                <Label [text]="item.price" class="card-price"></Label>
+
+                <FlexboxLayout alignItems="center">
+                    <Button text="-" class="qty-btn" verticalAlignment="center"></Button>
+                    <Label text="2" class="qty-total"></Label>
+                    <Button text="+" class="qty-btn" verticalAlignment="center"></Button>
+                </FlexboxLayout>
+
+            </StackLayout>
+        </FlexboxLayout>
+
+    </StackLayout>
+</ScrollView>
