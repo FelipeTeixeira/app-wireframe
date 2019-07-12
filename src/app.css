@@ -142,3 +142,47 @@ refer to http://docs.nativescript.org/ui/theme.
 .bold {
     font-family: "Nunito_Bold";
 }
+
+.black {
+    font-family: "Nunito_Black";
+}
+
+.summary {
+    display: flex;
+    color: #9faab7;
+    margin-bottom: 8;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.summary-value {
+    color: #333;
+}
+
+.summary-total {
+    color: #333;
+    font-size: 18;
+    border-width: 1 0 0 0;
+    border-color: #e5edef;
+    padding-top: 8;
+    margin-bottom: 0;
+}
+
+.summary-money {
+    font-size: 14;
+    line-height: 1;
+    color: #9faab7;
+}
+
+.summary-total-value {
+    font-size: 28;
+}
+
+.btn-confirm {
+    font-size: 16;
+    margin: 12;
+    border-radius: 4;
+    background: linear-gradient(262deg,#3483fa,#0559d7);
+    color: #fff;
+    text-transform: capitalize;
+}

@@ -51,14 +51,37 @@
                     <Label [text]="item.price" class="card-price"></Label>
 
                     <FlexboxLayout alignItems="center">
-                        <Button text="-" class="qty-btn" verticalAlignment="center"></Button>
+                        <Button text="-" class="qty-btn"></Button>
                         <Label text="2" class="qty-total"></Label>
-                        <Button text="+" class="qty-btn" verticalAlignment="center"></Button>
+                        <Button text="+" class="qty-btn"></Button>
                     </FlexboxLayout>
 
                 </StackLayout>
             </FlexboxLayout>
         </StackLayout>
+
+        <StackLayout class="card" marginTop="12">
+            <FlexboxLayout class="summary">
+                <Label text="Custo dos produtos"></Label>
+                <Label text="R$ 2,79" class="summary-value"></Label>
+            </FlexboxLayout>
+
+            <FlexboxLayout class="summary">
+                <Label text="Custo dos produtos"></Label>
+                <Label text="R$ 2,79" class="summary-value"></Label>
+            </FlexboxLayout>
+
+            <FlexboxLayout class="summary summary-total">
+                <FlexboxLayout flexDirection="column">
+                    <Label text="Valor total" class="black"></Label>
+                    <Label text="Com dinheiro" class="summary-money"></Label>
+                </FlexboxLayout>
+                <Label text="R$ 28,79" class="black summary-value summary-total-value"></Label>
+            </FlexboxLayout>
+
+        </StackLayout>
+
+        <Button text="Finalizar Reserva" class="btn-confirm"></Button>
 
     </StackLayout>
 </ScrollView>
