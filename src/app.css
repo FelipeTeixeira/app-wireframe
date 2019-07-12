@@ -186,3 +186,9 @@ refer to http://docs.nativescript.org/ui/theme.
     color: #fff;
     text-transform: capitalize;
 }
+
+.msg-withdraw {
+    font-size: 14;
+    text-align: center;
+    padding: 12 24;
+}
