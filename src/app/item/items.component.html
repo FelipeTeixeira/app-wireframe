@@ -5,7 +5,6 @@
     <StackLayout flexDirection="column">
 
         <StackLayout class="tabStore card">
-
             <ScrollView orientation="horizontal" class="tabStore-container">
                 <FlexboxLayout padding="4">
                     <FlexboxLayout class="tabStore-item tabStore-item-is-active" alignItems="center">
@@ -95,6 +94,21 @@
             </GridLayout>
         </StackLayout>
 
+        <StackLayout class="card payment" marginTop="12">
+            <GridLayout columns="*, auto" rows="auto">
+                <StackLayout col="0" row="0">
+                    <StackLayout>
+                        <Label text="Pagamento"></Label>
+                        <Label text="Selecione a forma de pagamento" class="payment-text"></Label>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout col="1" row="0" verticalAlignment="center">
+                    <Image src="res://arrow_right" class="payment-icon" stretch="fill"></Image>
+                </StackLayout>
+            </GridLayout>
+        </StackLayout>
+
         <StackLayout class="card" marginTop="12">
 
             <FlexboxLayout class="summary">
@@ -127,7 +141,6 @@
 
 <!--
     - colocar menu dropdown pra lixeira
-    - seleciona a forma de pagamento
 
     - Colocar icone de informativo, ao clicar abrir modal falando detalhes
     - Formas

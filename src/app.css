@@ -11,6 +11,20 @@ refer to http://docs.nativescript.org/ui/theme.
 */
 @import '~nativescript-theme-core/css/core.light.css';
 
+
+* {
+    font-family: "Nunito_Light";
+}
+
+.bold {
+    font-family: "Nunito_Bold";
+}
+
+.black {
+    font-family: "Nunito_Black";
+}
+
+
 .page {
     padding-top: 50;
     background: #eee;
@@ -135,18 +149,6 @@ refer to http://docs.nativescript.org/ui/theme.
     font-family: "Nunito_Bold";
 }
 
-* {
-    font-family: "Nunito_Light";
-}
-
-.bold {
-    font-family: "Nunito_Bold";
-}
-
-.black {
-    font-family: "Nunito_Black";
-}
-
 .summary {
     display: flex;
     color: #9faab7;
@@ -195,4 +197,20 @@ refer to http://docs.nativescript.org/ui/theme.
 
 .btn-trash {
     width: 14;
+}
+
+.payment {
+    color: #999;
+    font-size: 18;
+    color: #333;
+}
+
+.payment-text {
+    font-size: 15;
+    color: #999;
+    margin-top: 2;
+}
+
+.payment-icon {
+    width: 24;
 }
