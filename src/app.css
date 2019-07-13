@@ -29,10 +29,10 @@ refer to http://docs.nativescript.org/ui/theme.
 
 .tabStore-container {
     height: 38;
-    padding: 4;
     border-width: 2;
     border-color: #e5edef;
     border-radius: 20;
+    overflow: hidden;
 }
 
 .tabStore-item {

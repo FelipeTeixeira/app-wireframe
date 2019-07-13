@@ -6,10 +6,19 @@
 
         <StackLayout class="tabStore card">
 
-            <ScrollView orientation="horizontal">
-                <FlexboxLayout class="tabStore-container">
+            <ScrollView orientation="horizontal" class="tabStore-container">
+                <FlexboxLayout padding="4">
                     <FlexboxLayout class="tabStore-item tabStore-item-is-active" alignItems="center">
                         <Label text="Portal da Villa Choperia"></Label>
+                    </FlexboxLayout>
+                    <FlexboxLayout class="tabStore-item" alignItems="center">
+                        <Label text="Vila do Chop"></Label>
+                    </FlexboxLayout>
+                    <FlexboxLayout class="tabStore-item" alignItems="center">
+                        <Label text="Vila do Chop"></Label>
+                    </FlexboxLayout>
+                    <FlexboxLayout class="tabStore-item" alignItems="center">
+                        <Label text="Vila do Chop"></Label>
                     </FlexboxLayout>
                     <FlexboxLayout class="tabStore-item" alignItems="center">
                         <Label text="Vila do Chop"></Label>
@@ -22,7 +31,8 @@
         <StackLayout class="card address">
 
             <FlexboxLayout alignItems="center" class="store">
-                <Image src="https://cdn.wiboo.io/Imageb4bb3f4e-26bd-4817-9c5a-cb752e6bdf05" stretch="fill" class="store-logo"></Image>
+                <Image src="https://cdn.wiboo.io/Imageb4bb3f4e-26bd-4817-9c5a-cb752e6bdf05" stretch="fill"
+                    class="store-logo"></Image>
                 <Label text="Portal da Villa Bar e Choperia" class="store-name"></Label>
             </FlexboxLayout>
 
@@ -31,8 +41,7 @@
 
                 <StackLayout col="0" row="0" verticalAlignment="center">
                     <StackLayout orientation="horizontal">
-                        <Label
-                            text="Av. Cassiano Ricardo, 1800 - Jardim Alvorada, São José dos Campos - SP, 12246-870"
+                        <Label text="Av. Cassiano Ricardo, 1800 - Jardim Alvorada, São José dos Campos - SP, 12246-870"
                             textWrap="true" class="address-location">
                         </Label>
                     </StackLayout>
@@ -110,16 +119,15 @@
 
         <Button text="Finalizar Reserva" class="btn-confirm"></Button>
 
-        <Label class="msg-withdraw" textWrap="true" text="Não esqueça de conferir o hoŕario de funcionamento da loja, para retirar o produto."></Label>
+        <Label class="msg-withdraw" textWrap="true"
+            text="Não esqueça de conferir o hoŕario de funcionamento da loja, para retirar o produto."></Label>
 
     </StackLayout>
 </ScrollView>
 
 <!--
     - colocar menu dropdown pra lixeira
-    - tentar alinhar o grid de lojas melhor
     - seleciona a forma de pagamento
-    - alinhar dinheiro para direita dentro do card
 
     - Colocar icone de informativo, ao clicar abrir modal falando detalhes
     - Formas
