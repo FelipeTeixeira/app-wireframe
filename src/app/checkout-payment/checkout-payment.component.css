@@ -6,7 +6,32 @@
 .card {
     background-color: #FFF;
     padding: 12;
-    border-radius: 8;
+    border-radius: 0 0 8 8;
+}
+
+.tab {
+    padding: 0 12;
+    margin-top: 12;
+}
+
+.tab-item {
+    background-color: #fff;
+    padding: 8 0;
+    border-radius: 4 4 0 0;
+    border-width: 1;
+    border-color: #eee;
+    transition: border .2s ease;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.tab-item-is-active {
+    border-color: #fff;
+}
+
+.tab-item-is-active Label {
+    font-family: "Nunito_Bold";
 }
 
 .action-bar {
@@ -43,11 +68,11 @@
 
 .btn-confirm {
     font-size: 16;
-    margin: 12;
+    margin: 24 0 0;
     border-radius: 4;
     background: linear-gradient(262deg,#3483fa,#0559d7);
     color: #fff;
-    text-transform: capitalize;
+    text-transform: none;
 }
 
 .green {
@@ -65,4 +90,9 @@
 .icon-plus {
     font-size: 20;
     padding: 0 8;
+}
+
+.backPage {
+    font-size: 12;
+    margin: 16;
 }

@@ -1,38 +1,40 @@
 <ActionBar class="action-bar">
     <ActionBar.titleView>
         <StackLayout orientation="horizontal">
-            <Label text="Selecionar forma de pagamento"></Label>
+            <Label text="Escolher forma de pagamento"></Label>
         </StackLayout>
     </ActionBar.titleView>
 </ActionBar>
+
+
 
 <ScrollView class="page" *ngIf="!loading">
 
     <StackLayout>
 
-        <!-- <FlexboxLayout class="card" marginTop="12">
-                    <FlexboxLayout class="test" alignItems="center">
-                        <Label text="Wibx"></Label>
-                    </FlexboxLayout>
-                    <FlexboxLayout class="test" alignItems="center">
-                        <Label text="Wibx + Pagar na loja"></Label>
-                    </FlexboxLayout>
-                    <FlexboxLayout class="test" alignItems="center">
-                        <Label text="Pagar na loja"></Label>
-                    </FlexboxLayout>
-                </FlexboxLayout> -->
+        <FlexboxLayout class="tab">
+            <FlexboxLayout class="tab-item" (tap)="toggleTabWibx()" [ngClass]="{'tab-item-is-active': isTabWibx}">
+                <Label text="Wibx"></Label>
+            </FlexboxLayout>
+            <FlexboxLayout class="tab-item" (tap)="toggleTabWibxStore()" [ngClass]="{'tab-item-is-active': isTabWibxStore}">
+                <Label text="Wibx + Pagar na loja"></Label>
+            </FlexboxLayout>
+            <FlexboxLayout class="tab-item" (tap)="toggleTabStore()" [ngClass]="{'tab-item-is-active': isTabStore}">
+                <Label text="Pagar na loja"></Label>
+            </FlexboxLayout>
+        </FlexboxLayout>
 
-        <!-- PAGAR CM WIBX -->
-        <ng-container *ngIf="true">
-            <StackLayout class="card text-center">
-                <Image src="res://icon_wibx" stretch="fill" width="50" marginBottom="4"></Image>
+        <!-- se nao tiver, exibir um item de saiba mais e um botao pagar na loja que muda aba dai -->
+
+
+        <StackLayout class="card text-center" margin="0 12">
+            <!-- PAGAR CM WIBX -->
+            <ng-container *ngIf="isTabWibx">
+                <Image src="res://icon_wibx_purple" stretch="fill" width="50" marginBottom="4"></Image>
                 <Label text="Pague sua compra integral"></Label>
                 <Label text="com Wibx"></Label>
-            </StackLayout>
 
-            <StackLayout class="card" marginTop="12">
-
-                <FlexboxLayout class="summary">
+                <FlexboxLayout class="summary" marginTop="16">
                     <Label text="Seu saldo Wibx disponível"></Label>
                     <Label text="50,00" class="summary-value green"></Label>
                 </FlexboxLayout>
@@ -49,61 +51,55 @@
                     <Label text="40,00" class="summary-value"></Label>
                 </FlexboxLayout>
 
-            </StackLayout>
-        </ng-container>
+                <Button text="Escolher: Pagar com Wibx" [nsRouterLink]="['/items']" pageTransition="slideRight" class="btn-confirm"></Button>
 
+            </ng-container>
 
-
-        <!-- WIBX + LOJA -->
-        <ng-container *ngIf="false">
-
-
-            <StackLayout class="card text-center">
+            <!-- WIBX + LOJA -->
+            <ng-container *ngIf="isTabWibxStore">
 
                 <FlexboxLayout justifyContent="center" marginBottom="4">
-                    <Image src="res://icon_wibx" stretch="fill" width="50"></Image>
+                    <Image src="res://icon_wibx_purple" stretch="fill" width="50"></Image>
 
                     <Label text="+" class="icon-plus black" verticalAlignment="top"></Label>
 
-                    <Image src="res://icon_real" stretch="fill" width="50"></Image>
+                    <Image src="res://icon_real_green" stretch="fill" width="50"></Image>
                 </FlexboxLayout>
 
                 <Label text="Pague uma parte com suas Wibx"></Label>
                 <Label text="e o restante pague na loja."></Label>
-            </StackLayout>
 
+                <StackLayout marginTop="16">
+                    <Label textWrap="true" width="80%"
+                        text="Se você deseja fazer o pagamento na loja, basta clicar em 'Escolher pagar na Loja' pra você reservar seu pedido.">
+                    </Label>
+                </StackLayout>
 
+                <Button text="Escolher: Pagar com Wibx e na Loja" [nsRouterLink]="['/items']" pageTransition="slideRight" class="btn-confirm"></Button>
 
-            <StackLayout class="card text-center" marginTop="12">
+            </ng-container>
 
-                <Label textWrap="true" width="80%"
-                    text="Se você deseja fazer o pagamento na loja, basta clicar em 'Selecionar' pra você reservar seu pedido'">
-                </Label>
-
-            </StackLayout>
-
-        </ng-container>
-
-        <!-- PAGAR NA LOJA -->
-        <ng-container *ngIf="false">
-
-            <StackLayout class="card text-center">
-                <Image src="res://icon_real" stretch="fill" marginBottom="4" width="50"></Image>
+            <!-- PAGAR NA LOJA -->
+            <ng-container *ngIf="isTabStore">
+                <Image src="res://icon_real_green" stretch="fill" marginBottom="4" width="50"></Image>
                 <Label text="Pague seu produto na"></Label>
                 <Label text="retirada da loja"></Label>
-            </StackLayout>
 
-            <StackLayout class="card text-center" marginTop="12">
+                <StackLayout marginTop="12">
+                    <Label textWrap="true" width="80%"
+                        text="Se você deseja fazer o pagamento na loja, basta clicar em 'Escolher pagar na Loja' pra você reservar seu pedido.">
+                    </Label>
+                </StackLayout>
 
-                <Label textWrap="true" width="80%"
-                    text="Se você deseja fazer o pagamento na loja, basta clicar em 'Selecionar' pra você reservar seu pedido'">
-                </Label>
+                <Button text="Escolher: Pagar na Loja" [nsRouterLink]="['/items']" pageTransition="slideRight" class="btn-confirm"></Button>
 
-            </StackLayout>
+            </ng-container>
 
-        </ng-container>
 
-        <Button text="Selecionar" [nsRouterLink]="['/items']" pageTransition="slideRight" class="btn-confirm"></Button>
+        </StackLayout>
+
+        <Label class="backPage" text="Voltar para o carrinho" [nsRouterLink]="['/items']" pageTransition="slideRight"></Label>
+
 
     </StackLayout>
 
@@ -111,6 +107,6 @@
 </ScrollView>
 
 <!--
-            GUiche virtual - pagamento seguro
-            - fazer agora parecido
-        -->
+    GUiche virtual - pagamento seguro
+    - fazer agora parecido
+-->
