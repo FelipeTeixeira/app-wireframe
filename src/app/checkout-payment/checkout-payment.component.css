@@ -1,1 +1,36 @@
-/* Add mobile styles for the component here.  */
+.action-bar {
+    background: linear-gradient(262deg, #3aa7af, #38b88c);
+    font-size: 14;
+}
+
+.test {
+
+}
+
+
+.summary {
+    display: flex;
+    color: #9faab7;
+    margin-bottom: 8;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.summary-value {
+    color: #333;
+}
+
+.summary-total {
+    color: #333;
+    /* font-size: 18; */
+    border-width: 1 0 0 0;
+    border-color: #e5edef;
+    padding-top: 8;
+    margin-bottom: 0;
+}
+
+.summary-money {
+    font-size: 14;
+    line-height: 1;
+    color: #9faab7;
+}

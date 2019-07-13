@@ -1,25 +1,65 @@
-<ActionBar title="Selecionar forma de pagamento" class="action-bar">
-</ActionBar>
+<ActionBar class="action-bar">
+        <ActionBar.titleView>
+            <StackLayout orientation="horizontal">
+                <Label text="Selecionar forma de pagamento"></Label>
+            </StackLayout>
+        </ActionBar.titleView>
+    </ActionBar>
 
-<ScrollView class="page" *ngIf="!loading">
-    <StackLayout>
+    <ScrollView class="page" *ngIf="!loading">
 
-            <!-- [nsRouterLink]="['/items']" pageTransition="slideRight" -->
+        <!-- [nsRouterLink]="['/items']" pageTransition="slideRight" -->
 
-        <Button class="btn btn-primary btn-active" id="button" text="Tap me!" ></Button>
 
-    </StackLayout>
-</ScrollView>
+        <StackLayout>
 
-<!--
-    - colocar menu dropdown pra lixeira
+            <!-- <FlexboxLayout class="card" marginTop="12">
+                <FlexboxLayout class="test" alignItems="center">
+                    <Label text="Wibx"></Label>
+                </FlexboxLayout>
+                <FlexboxLayout class="test" alignItems="center">
+                    <Label text="Wibx + Pagar na loja"></Label>
+                </FlexboxLayout>
+                <FlexboxLayout class="test" alignItems="center">
+                    <Label text="Pagar na loja"></Label>
+                </FlexboxLayout>
+            </FlexboxLayout> -->
 
-    - Colocar icone de informativo, ao clicar abrir modal falando detalhes
-    - Formas
-        Pague pelo app
-        Pague na entrega
-        https://files.slack.com/files-pri/T0GPLQSTX-FLDMU4RSA/image.png
+            <StackLayout class="card" style="text-align: center">
+                <Image src="https://cdn.wiboo.io/Imageb4bb3f4e-26bd-4817-9c5a-cb752e6bdf05" width="50" stretch="fill"></Image>
+                <Label text="Pague sua compra integral"></Label>
+                <Label text="com Wibx"></Label>
+            </StackLayout>
 
-    Resumo do pedido
-        https://lh4.googleusercontent.com/gO07J325lQruOY_BiuNIPnz5BI7w57UatMqpzrvwtw5-cgs9b0VwN_kAzkwkw7-HPatp-cNSfohg-zuf9FNzD9FF7v4xBPB8UoIAA57J=s2003
- -->
+            <StackLayout class="card" marginTop="12">
+
+                <FlexboxLayout class="summary">
+                    <Label text="Seu saldo Wibx disponível"></Label>
+                    <Label text="50,00" class="summary-value"></Label>
+                </FlexboxLayout>
+
+                <FlexboxLayout class="summary">
+                    <Label text="Total da compra em Wibx"></Label>
+                    <Label text="- 10,00" class="summary-value"></Label>
+                </FlexboxLayout>
+
+                <FlexboxLayout class="summary summary-total">
+                    <FlexboxLayout flexDirection="column">
+                        <Label text="Seu novo saldo será " class="black"></Label>
+                    </FlexboxLayout>
+                    <Label text="40,00" class="black summary-value"></Label>
+                </FlexboxLayout>
+
+            </StackLayout>
+
+            <Button text="Selecionar: Pagar com Wibx" class="btn-confirm"></Button>
+
+        </StackLayout>
+
+
+    </ScrollView>
+
+    <!--
+        GUiche virtual - pagamento seguro
+        - fazer agora parecido
+    -->
