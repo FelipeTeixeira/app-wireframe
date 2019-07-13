@@ -1,6 +1,18 @@
+.page {
+    padding-top: 50;
+    background: #eee;
+}
+
+.card {
+    background-color: #FFF;
+    padding: 12;
+    border-radius: 8;
+}
+
 .action-bar {
     background: linear-gradient(262deg, #3aa7af, #38b88c);
     font-size: 14;
+    color: #FFF;
 }
 
 .summary {
