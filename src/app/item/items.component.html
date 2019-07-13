@@ -45,28 +45,45 @@
 
         <StackLayout class="card" marginTop="12" padding="0">
 
-            <FlexboxLayout alignItems="flex-start" class="product" *ngFor="let item of items">
 
-                <Image [src]="item.img" class="img" stretch="fill"></Image>
+            <GridLayout columns="80, *" rows="auto" class="product" *ngFor="let item of items">
 
-                <StackLayout class="card-info" background="red">
-
-                    <Label [text]="item.name" textWrap="true" class="card-name"></Label>
-
-                    <StackLayout width="16" height="16">
-                        <Image src="res://trash" stretch="fill"></Image>
-                    </StackLayout>
-
-                    <Label [text]="item.price" class="card-price"></Label>
-
-                    <FlexboxLayout alignItems="center">
-                        <Button text="-" class="qty-btn"></Button>
-                        <Label text="2" class="qty-total"></Label>
-                        <Button text="+" class="qty-btn"></Button>
-                    </FlexboxLayout>
-
+                <StackLayout col="0" row="0" horizontalAlignment="left">
+                    <Image [src]="item.img" class="img" stretch="fill"></Image>
                 </StackLayout>
-            </FlexboxLayout>
+
+                <FlexboxLayout flexDirection="column" justifyContent="space-between" col="1" row="0">
+                    <GridLayout columns="*, auto" rows="auto">
+                        <StackLayout col="0" row="0">
+                            <StackLayout orientation="horizontal">
+                                <Label [text]="item.name" textWrap="true" class="card-name"></Label>
+                            </StackLayout>
+
+                        </StackLayout>
+
+                        <StackLayout col="1" row="0">
+                            <Image src="res://trash" class="btn-trash" stretch="fill"></Image>
+                        </StackLayout>
+                    </GridLayout>
+
+                    <StackLayout verticalAlignment="bottom">
+                        <GridLayout columns="*, auto" rows="auto">
+
+                            <StackLayout col="0" row="0" orientation="horizontal">
+                                <FlexboxLayout alignItems="center">
+                                    <Button text="-" lineHeight="1" class="qty-btn"></Button>
+                                    <Label text="2" class="qty-total"></Label>
+                                    <Button text="+" class="qty-btn"></Button>
+                                </FlexboxLayout>
+                            </StackLayout>
+
+                            <StackLayout col="1" row="0" orientation="horizontal">
+                                <Label [text]="item.price" class="card-price" verticalAlignment="bottom"></Label>
+                            </StackLayout>
+                        </GridLayout>
+                    </StackLayout>
+                </FlexboxLayout>
+            </GridLayout>
         </StackLayout>
 
         <StackLayout class="card" marginTop="12">
@@ -99,7 +116,8 @@
 </ScrollView>
 
 <!--
-    - falta botao de excluir
+    - colocar menu dropdown pra lixeira
+    - tentar alinhar o grid de lojas melhor
     - seleciona a forma de pagamento
     - alinhar dinheiro para direita dentro do card
 

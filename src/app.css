@@ -80,21 +80,26 @@ refer to http://docs.nativescript.org/ui/theme.
 /* QTY */
 .qty-total {
     font-size: 14;
-    width: 20;
+    width: 24;
     text-align: center;
     padding: 0;
     margin: 0;
 }
 
 .qty-btn {
-    font-size: 18;
+    font-family: "Nunito_Bold";
+    font-size: 14;
     padding: 0;
     margin: 0;
-    width: 30;
-    height: 30;
+    width: 24;
+    height: 24;
+    min-width: inherit;
+    min-height: inherit;
     background: #fff;
     color: #3aa7af;
-    border-color: #3aa7af;
+    border-color: #e5edef;
+    border-width: 2;
+    border-radius: 4;
 }
 
 .address-label {
