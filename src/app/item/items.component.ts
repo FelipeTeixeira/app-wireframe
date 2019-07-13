@@ -27,7 +27,7 @@ export class ItemsComponent implements OnInit {
 
     items = TESTE;
 
-    constructor() { }
+    constructor() {}
 
     ngOnInit(): void {
 

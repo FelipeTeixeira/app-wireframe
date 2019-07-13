@@ -2,9 +2,9 @@
 </ActionBar>
 
 <ScrollView class="page" *ngIf="!loading">
-    <StackLayout flexDirection="column">
+    <StackLayout>
 
-        <StackLayout class="tabStore card">
+        <StackLayout class="tabStore card" [nsRouterLink]="['/checkout-payment']" pageTransition="slideLeft">
             <ScrollView orientation="horizontal" class="tabStore-container">
                 <FlexboxLayout padding="4">
                     <FlexboxLayout class="tabStore-item tabStore-item-is-active" alignItems="center">
@@ -94,7 +94,7 @@
             </GridLayout>
         </StackLayout>
 
-        <StackLayout class="card payment" marginTop="12">
+        <StackLayout class="card payment" [nsRouterLink]="['/checkout-payment']" pageTransition="slideLeft" marginTop="12">
             <GridLayout columns="*, auto" rows="auto">
                 <StackLayout col="0" row="0">
                     <StackLayout>
