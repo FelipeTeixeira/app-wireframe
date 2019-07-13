@@ -3,11 +3,6 @@
     font-size: 14;
 }
 
-.test {
-
-}
-
-
 .summary {
     display: flex;
     color: #9faab7;
@@ -22,7 +17,6 @@
 
 .summary-total {
     color: #333;
-    /* font-size: 18; */
     border-width: 1 0 0 0;
     border-color: #e5edef;
     padding-top: 8;
@@ -33,4 +27,30 @@
     font-size: 14;
     line-height: 1;
     color: #9faab7;
+}
+
+.btn-confirm {
+    font-size: 16;
+    margin: 12;
+    border-radius: 4;
+    background: linear-gradient(262deg,#3483fa,#0559d7);
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.green {
+    color: #4daa5d;
+}
+
+.red {
+    color: #b83726;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.icon-plus {
+    font-size: 20;
+    padding: 0 8;
 }

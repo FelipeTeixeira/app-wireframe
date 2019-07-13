@@ -14,45 +14,101 @@
         <StackLayout>
 
             <!-- <FlexboxLayout class="card" marginTop="12">
-                <FlexboxLayout class="test" alignItems="center">
-                    <Label text="Wibx"></Label>
-                </FlexboxLayout>
-                <FlexboxLayout class="test" alignItems="center">
-                    <Label text="Wibx + Pagar na loja"></Label>
-                </FlexboxLayout>
-                <FlexboxLayout class="test" alignItems="center">
-                    <Label text="Pagar na loja"></Label>
-                </FlexboxLayout>
-            </FlexboxLayout> -->
-
-            <StackLayout class="card" style="text-align: center">
-                <Image src="https://cdn.wiboo.io/Imageb4bb3f4e-26bd-4817-9c5a-cb752e6bdf05" width="50" stretch="fill"></Image>
-                <Label text="Pague sua compra integral"></Label>
-                <Label text="com Wibx"></Label>
-            </StackLayout>
-
-            <StackLayout class="card" marginTop="12">
-
-                <FlexboxLayout class="summary">
-                    <Label text="Seu saldo Wibx disponível"></Label>
-                    <Label text="50,00" class="summary-value"></Label>
-                </FlexboxLayout>
-
-                <FlexboxLayout class="summary">
-                    <Label text="Total da compra em Wibx"></Label>
-                    <Label text="- 10,00" class="summary-value"></Label>
-                </FlexboxLayout>
-
-                <FlexboxLayout class="summary summary-total">
-                    <FlexboxLayout flexDirection="column">
-                        <Label text="Seu novo saldo será " class="black"></Label>
+                    <FlexboxLayout class="test" alignItems="center">
+                        <Label text="Wibx"></Label>
                     </FlexboxLayout>
-                    <Label text="40,00" class="black summary-value"></Label>
-                </FlexboxLayout>
+                    <FlexboxLayout class="test" alignItems="center">
+                        <Label text="Wibx + Pagar na loja"></Label>
+                    </FlexboxLayout>
+                    <FlexboxLayout class="test" alignItems="center">
+                        <Label text="Pagar na loja"></Label>
+                    </FlexboxLayout>
+                </FlexboxLayout> -->
 
-            </StackLayout>
+            <!-- PAGAR CM WIBX -->
+            <ng-container *ngIf="true">
+                <StackLayout class="card text-center">
+                    <Image src="res://icon_wibx" stretch="fill" width="50" marginBottom="4"></Image>
+                    <Label text="Pague sua compra integral"></Label>
+                    <Label text="com Wibx"></Label>
+                </StackLayout>
 
-            <Button text="Selecionar: Pagar com Wibx" class="btn-confirm"></Button>
+                <StackLayout class="card" marginTop="12">
+
+                    <FlexboxLayout class="summary">
+                        <Label text="Seu saldo Wibx disponível"></Label>
+                        <Label text="50,00" class="summary-value green"></Label>
+                    </FlexboxLayout>
+
+                    <FlexboxLayout class="summary">
+                        <Label text="Total da compra em Wibx"></Label>
+                        <Label text="- 10,00" class="summary-value red"></Label>
+                    </FlexboxLayout>
+
+                    <FlexboxLayout class="summary summary-total">
+                        <FlexboxLayout flexDirection="column">
+                            <Label text="Seu novo saldo será "></Label>
+                        </FlexboxLayout>
+                        <Label text="40,00" class="summary-value"></Label>
+                    </FlexboxLayout>
+
+                </StackLayout>
+            </ng-container>
+
+
+
+            <!-- WIBX + LOJA -->
+            <ng-container *ngIf="false">
+
+
+                <StackLayout class="card text-center">
+
+                    <FlexboxLayout justifyContent="center" marginBottom="4">
+                        <Image src="res://icon_wibx" stretch="fill" width="50"></Image>
+
+                        <Label text="+" class="icon-plus black" verticalAlignment="top"></Label>
+
+                        <Image src="res://icon_real" stretch="fill" width="50"></Image>
+                    </FlexboxLayout>
+
+                    <Label text="Pague uma parte com suas Wibx"></Label>
+                    <Label text="e o restante pague na loja."></Label>
+                </StackLayout>
+
+
+
+                <StackLayout class="card text-center" marginTop="12">
+
+                    <Label textWrap="true"
+                        width="80%"
+                        text="Se você deseja fazer o pagamento na loja, basta clicar em 'Selecionar' pra você reservar seu pedido'">
+                    </Label>
+
+                </StackLayout>
+
+            </ng-container>
+
+            <!-- PAGAR NA LOJA -->
+            <ng-container *ngIf="false">
+
+                <StackLayout class="card text-center">
+                    <Image src="res://icon_real" stretch="fill" marginBottom="4" width="50"></Image>
+                    <Label text="Pague seu produto na"></Label>
+                    <Label text="retirada da loja"></Label>
+                </StackLayout>
+
+                <StackLayout class="card text-center" marginTop="12">
+
+                    <Label textWrap="true"
+                        width="80%"
+                        text="Se você deseja fazer o pagamento na loja, basta clicar em 'Selecionar' pra você reservar seu pedido'">
+                    </Label>
+
+                </StackLayout>
+
+            </ng-container>
+
+            <Button text="Selecionar" class="btn-confirm"></Button>
 
         </StackLayout>
 
@@ -60,6 +116,6 @@
     </ScrollView>
 
     <!--
-        GUiche virtual - pagamento seguro
-        - fazer agora parecido
-    -->
+            GUiche virtual - pagamento seguro
+            - fazer agora parecido
+        -->

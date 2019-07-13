@@ -21,7 +21,8 @@ const TESTE = [
 @Component({
     selector: "ns-items",
     moduleId: module.id,
-    templateUrl: "./items.component.html"
+    templateUrl: "./items.component.html",
+    styleUrls: ['./items.component.css'],
 })
 export class ItemsComponent implements OnInit {
 
