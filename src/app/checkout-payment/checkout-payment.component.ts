@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterExtensions } from 'nativescript-angular/router';
 
 @Component({
     selector: 'ns-checkout-payment',
@@ -12,7 +13,7 @@ export class CheckoutPaymentComponent implements OnInit {
     isTabStore = false;
 
 
-    constructor() {
+    constructor(private router: RouterExtensions) {
     }
 
     ngOnInit() {
@@ -36,5 +37,20 @@ export class CheckoutPaymentComponent implements OnInit {
         this.isTabStore = true;
     }
 
+
+    selectedPayment() {
+        if (this.router.canGoBack()) {
+            this.router.back();
+            return;
+        }
+
+        // apenas teste - REMOVER DEPOIS
+        this.router.navigate(["/items"], {
+            animated: true,
+            transition: {
+                name: "slideLeft",
+            }
+        });
+    }
 
 }

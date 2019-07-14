@@ -2,6 +2,7 @@
     GUiche virtual - pagamento seguro
     - fazer agora parecido
     - ao voltar na página traniscao pra baixo
+    - escolher no lugar da seta
 -->
 
 <!-- se nao tiver, exibir um item de saiba mais e um botao pagar na loja que muda aba dai -->
@@ -56,8 +57,7 @@
                     <Label text="40,00" class="summary-value"></Label>
                 </FlexboxLayout>
 
-                <Button text="Escolher: Pagar com Wibx" [nsRouterLink]="['/items']" pageTransition="slideRight"
-                    class="btn-confirm"></Button>
+                <Button text="Escolher: Pagar com Wibx" (tap)="selectedPayment()" class="btn-confirm"></Button>
 
             </ng-container>
 
@@ -98,8 +98,7 @@
                     <Label text="R$ 28,79" class="black summary-value summary-total-value"></Label>
                 </FlexboxLayout>
 
-                <Button text="Escolher: Pagar com Wibx e na Loja" [nsRouterLink]="['/items']"
-                    pageTransition="slideRight" class="btn-confirm"></Button>
+                <Button text="Escolher: Pagar com Wibx e na Loja" (tap)="selectedPayment()" class="btn-confirm"></Button>
 
             </ng-container>
 
@@ -115,11 +114,9 @@
                     </Label>
                 </StackLayout>
 
-                <Button text="Escolher: Pagar na Loja" [nsRouterLink]="['/items']" pageTransition="slideRight"
-                    class="btn-confirm"></Button>
+                <Button text="Escolher: Pagar na Loja" (tap)="selectedPayment()" class="btn-confirm"></Button>
 
             </ng-container>
-
 
         </StackLayout>
 
