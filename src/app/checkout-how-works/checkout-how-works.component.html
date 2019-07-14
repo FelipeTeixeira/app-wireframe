@@ -1,0 +1,65 @@
+<ActionBar class="action-bar">
+
+    <GridLayout columns="*, auto" rows="auto">
+        <StackLayout col="0" row="0" orientation="horizontal" horizontalAlignment="left">
+            <Image src="res://icon_arrow_left" width="30" (tap)="backPage()" class="action-image"></Image>
+            <Label text="Sucesso" marginLeft="12" verticalAlignment="center" class="action-label"></Label>
+        </StackLayout>
+    </GridLayout>
+
+</ActionBar>
+
+<ScrollView class="page" *ngIf="!loading">
+
+    <StackLayout>
+
+        <Label text="Parabéns!" class="title"></Label>
+        <Label text="Compra realizada com Sucesso!" class="subtitle"></Label>
+        <Label text="Veja como funciona a retirada do produto no estabelecimento." class="how-works-title"
+            textWrap="true"></Label>
+
+        <FlexboxLayout class="how-works">
+            <Image class="how-works-img" src="res://how_works_1_order"></Image>
+            <Label text="Vá até a página de" textWrap="true"></Label>
+
+            <!-- link para pagina de pedidos -->
+            <Label class="how-works-link" text="Meus Pedidos" textWrap="true"></Label>
+            <Label text="e clique em 'Solicitar Retirada'" textWrap="true"></Label>
+        </FlexboxLayout>
+
+        <FlexboxLayout class="how-works">
+            <Image class="how-works-img" src="res://how_works_2_store"></Image>
+            <Label text="Dirija-se até o estabelecimento onde fez a compra e mostre o número do seu pedido."
+                textWrap="true"></Label>
+
+                <Label text="Endereço porra"
+                textWrap="true"></Label>
+
+        </FlexboxLayout>
+
+        <FlexboxLayout class="how-works">
+            <Image class="how-works-img" src="res://how_works_3_bought"></Image>
+            <Label
+                text="Caso o valor da compra já tenha sido integralmente pago é só receber seu pedido com o atendente."
+                textWrap="true"></Label>
+        </FlexboxLayout>
+
+        <Label text="Que tal voltar e conferir produtos exclusivos para você?!" class="bold how-works-check"
+            textWrap="true"></Label>
+
+        <!-- colocar Rota correta -->
+        <Button text="Voltar para Página Inicial" [nsRouterLink]="['/items']" pageTransition="slideRight"
+            class="btn-back"></Button>
+
+        <!-- So exibir se existir Produto de outra loja no carrinho para concluir a compra -->
+        <ng-container *ngIf="true">
+            <Label text="Ou concluir sua compra clicando abaixo" class="bold how-works-check label-or-checkout" textWrap="true"></Label>
+
+            <Button text="Voltar para o Carrinho" [nsRouterLink]="['/items']" pageTransition="slideRight"
+                class="btn-back btn-backCheckout"></Button>
+        </ng-container>
+
+
+    </StackLayout>
+
+</ScrollView>

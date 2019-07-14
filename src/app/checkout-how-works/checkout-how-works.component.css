@@ -1,0 +1,68 @@
+.action-bar {
+    background: linear-gradient(262deg, #3aa7af, #38b88c);
+    color: #FFF;
+    font-size: 16;
+}
+
+.page {
+    padding-top: 50;
+    background: #eee;
+    text-align: center;
+}
+
+.title {
+    font-size: 20;
+    font-family: "Nunito_Bold";
+    margin-top: 24;
+}
+
+.subtitle {
+    font-size: 20;
+    font-family: "Nunito_Bold";
+    margin-bottom: 24;
+}
+
+.how-works-title {
+    font-size: 16;
+    margin-bottom: 16;
+    width: 280;
+}
+
+.how-works {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300;
+    margin-bottom: 32;
+}
+
+.how-works-img {
+    width: 120;
+}
+
+.how-works-link {
+    color: #3483fa;
+}
+
+.how-works-check {
+    width: 280;
+    padding: 0 10;
+    border-width: 1 0 0;
+    border-color: #fbfbfb;
+    padding-top: 16;
+}
+
+.btn-back {
+    font-size: 14;
+    margin: 16 16 22;
+    border-radius: 4;
+    background: linear-gradient(262deg,#3483fa,#0559d7);
+    color: #fff;
+    text-transform: none;
+    width: 180;
+    height: 40;
+}
+
+.btn-backCheckout {
+    background: linear-gradient(262deg, #3aa7af, #38b88c);
+}
