@@ -1,3 +1,9 @@
+.action-bar {
+    background: linear-gradient(262deg, #3aa7af, #38b88c);
+    font-size: 16;
+    color: #FFF;
+}
+
 .page {
     padding-top: 50;
     background: #eee;
@@ -28,17 +34,12 @@
 }
 
 .tab-item-is-active {
-    border-width: 1 1 0 1
+    border-width: 1 1 0 1;
+    color: #4daa5d;
 }
 
 .tab-item-is-active Label {
     font-family: "Nunito_Bold";
-}
-
-.action-bar {
-    background: linear-gradient(262deg, #3aa7af, #38b88c);
-    font-size: 16;
-    color: #FFF;
 }
 
 .summary {
@@ -121,4 +122,8 @@
 .inputReal {
     text-align: right;
     width: 94;
+}
+
+.notWibx {
+    color: #9faab7;
 }

@@ -11,6 +11,8 @@ export class CheckoutPaymentComponent implements OnInit {
     isTabWibx = true;
     isTabWibxStore = false;
     isTabStore = false;
+    // TESTE, se nao tiver wibx, so deixar esse cara falso
+    isWibx = true;
 
 
     constructor(private router: RouterExtensions) {
@@ -45,14 +47,6 @@ export class CheckoutPaymentComponent implements OnInit {
 
     selectedPayment() {
         this.backPage();
-
-        // apenas teste - REMOVER DEPOIS
-        this.router.navigate(["/items"], {
-            animated: true,
-            transition: {
-                name: "slideLeft",
-            }
-        });
     }
 
 }

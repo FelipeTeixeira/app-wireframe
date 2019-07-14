@@ -1,7 +1,8 @@
 <!--
-    - texto de escolher no lugar da seta
     - se nao tiver Wibx, exibir um item de saiba mais e um botao pagar na loja que muda aba dai
+    - saldo em Wibx no topo
     - colocar termos de uso
+    - tela de aplicar cupom
     - colocar menu dropdown pra lixeira
     - Colocar icone de informativo, ao clicar abrir modal falando detalhes
 -->
@@ -35,8 +36,19 @@
 
         <StackLayout class="card text-center" margin="0 12">
 
+            <StackLayout *ngIf="!isWibx && !isTabStore" class="notWibx">
+
+                <Image src="res://sad" width="50" margin="12 0"></Image>
+                
+                <Label text="Ops!" class="black"></Label>
+
+                <Label text="Você não tem saldo em Wibx"></Label>
+                <Label textWrap="true" text="Compartilhe em suas redes sociais produtos ou anúncios de grandes empresas e ganhe Wibx."></Label>
+            </StackLayout>
+
+
             <!-- PAGAR CM WIBX -->
-            <ng-container *ngIf="isTabWibx">
+            <ng-container *ngIf="isTabWibx && isWibx">
                 <Image src="res://icon_wibx_purple" stretch="fill" width="50" marginBottom="4"></Image>
                 <Label text="Pague sua compra integral"></Label>
                 <Label text="com Wibx"></Label>
@@ -63,7 +75,7 @@
             </ng-container>
 
             <!-- WIBX + LOJA -->
-            <ng-container *ngIf="isTabWibxStore">
+            <ng-container *ngIf="isTabWibxStore && isWibx">
 
                 <FlexboxLayout justifyContent="center" marginBottom="4">
                     <Image src="res://icon_wibx_purple" stretch="fill" width="50"></Image>
