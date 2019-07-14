@@ -105,13 +105,14 @@
             <GridLayout columns="*, auto" rows="auto">
                 <StackLayout col="0" row="0">
                     <StackLayout>
-                        <Label text="Pagamento"></Label>
-                        <Label text="Selecione a forma de pagamento" class="payment-text"></Label>
+                        <Label text="Formas de pagamento"></Label>
+                        <!-- de acordo com o que selecionar na tela de pagamento, exibir aqui o valor -->
+                        <!-- <Label text="Wibx + Dinheiro" class="payment-text"></Label> -->
                     </StackLayout>
                 </StackLayout>
 
                 <StackLayout col="1" row="0" verticalAlignment="center">
-                    <Image src="res://arrow_right" class="payment-icon" stretch="fill"></Image>
+                    <Label text="Escolher" class="payment-choose"></Label>
                 </StackLayout>
             </GridLayout>
         </StackLayout>
