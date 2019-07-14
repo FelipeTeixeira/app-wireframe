@@ -102,8 +102,6 @@
     margin: 0;
     width: 24;
     height: 24;
-    min-width: inherit;
-    min-height: inherit;
     background: #fff;
     color: #3aa7af;
     border-color: #e5edef;
@@ -213,4 +211,12 @@
 .payment-choose {
     font-size: 16;
     color: #38b88c;
+}
+
+.voucher-text {
+    font-size: 14;
+    margin-left: 12;
+}
+
+.vouche-img {
 }

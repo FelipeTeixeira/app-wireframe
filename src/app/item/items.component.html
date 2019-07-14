@@ -109,6 +109,26 @@
             </GridLayout>
         </StackLayout>
 
+
+        <StackLayout class="card payment" [nsRouterLink]="['/checkout-payment']" pageTransition="slideLeft" marginTop="12">
+            <GridLayout columns="*, auto" rows="auto">
+
+                <StackLayout col="0" row="0" orientation="horizontal" horizontalAlignment="left" verticalAlignment="center">
+                    <Image src="res://discount_voucher" class="voucher-img" width="40" stretch="fill"></Image>
+
+                    <StackLayout class="voucher-text" verticalAlignment="center">
+                        <Label text="Cupom"></Label>
+                        <Label text="1 disponível"></Label>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout col="1" row="0" verticalAlignment="center">
+                    <Label text="Adicionar" class="payment-choose"></Label>
+                </StackLayout>
+            </GridLayout>
+        </StackLayout>
+
+
         <StackLayout class="card payment" [nsRouterLink]="['/checkout-payment']" pageTransition="slideLeft" marginTop="12">
             <GridLayout columns="*, auto" rows="auto">
                 <StackLayout col="0" row="0">
