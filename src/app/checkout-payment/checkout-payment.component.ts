@@ -24,8 +24,6 @@ export class CheckoutPaymentComponent implements OnInit {
         this.isTabStore = false;
     }
 
-    // fazer is show
-
     toggleTabWibxStore() {
         this.isTabWibx = false;
         this.isTabWibxStore = true;

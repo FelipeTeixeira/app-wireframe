@@ -7,6 +7,7 @@
     background-color: #FFF;
     padding: 12;
     border-radius: 0 0 8 8;
+    text-align: center;
 }
 
 .tab {
@@ -27,7 +28,7 @@
 }
 
 .tab-item-is-active {
-    border-color: #fff;
+    border-width: 1 1 0 1
 }
 
 .tab-item-is-active Label {
@@ -60,6 +61,14 @@
     margin-bottom: 0;
 }
 
+.summary-total-wibxPayStore {
+    color: #333;
+    font-size: 18;
+    border-width: 0;
+    padding-top: 8;
+    margin-bottom: 0;
+}
+
 .summary-money {
     font-size: 14;
     line-height: 1;
@@ -83,10 +92,6 @@
     color: #b83726;
 }
 
-.text-center {
-    text-align: center;
-}
-
 .icon-plus {
     font-size: 20;
     padding: 0 8;
@@ -95,4 +100,25 @@
 .backPage {
     font-size: 12;
     margin: 16;
+}
+
+.inputWibx-label {
+    text-align: left;
+    color: #9faab7;
+    margin-bottom: 6;
+}
+
+.inputWibx {
+    text-align: left;
+    color: #9faab7;
+    border-color: #eee;
+    border-width: 2;
+    border-radius: 4;
+    padding: 10;
+    font-size: 14;
+}
+
+.inputReal {
+    text-align: right;
+    width: 94;
 }
