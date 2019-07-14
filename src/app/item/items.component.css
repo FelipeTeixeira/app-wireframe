@@ -6,6 +6,18 @@
 .action-bar {
     background: linear-gradient(262deg, #3aa7af, #38b88c);
     color: #FFF;
+    font-size: 16;
+}
+
+.action-bar-count {
+    font-size: 10;
+    font-family: "Nunito_Bold";
+    text-align: center;
+    border-radius: 50;
+    background: #ffac5c;
+    width: 16;
+    height: 16;
+    margin-left: 4;
 }
 
 .tabStore {

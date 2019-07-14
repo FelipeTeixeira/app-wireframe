@@ -1,4 +1,11 @@
-<ActionBar title="Carrinho" class="action-bar">
+<ActionBar class="action-bar">
+
+    <StackLayout orientation="horizontal" horizontalAlignment="left">
+        <Image src="res://icon_arrow_left" width="30" (tap)="backPage()" class="action-image"></Image>
+        <Label text="Carrinho" marginLeft="12" verticalAlignment="center" class="action-label"></Label>
+        <Label text="2" class="action-bar-count"></Label>
+    </StackLayout>
+
 </ActionBar>
 
 <ScrollView class="page" *ngIf="!loading">

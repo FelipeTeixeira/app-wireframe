@@ -37,12 +37,14 @@ export class CheckoutPaymentComponent implements OnInit {
         this.isTabStore = true;
     }
 
-
-    selectedPayment() {
+    backPage() {
         if (this.router.canGoBack()) {
             this.router.back();
-            return;
         }
+    }
+
+    selectedPayment() {
+        this.backPage();
 
         // apenas teste - REMOVER DEPOIS
         this.router.navigate(["/items"], {
