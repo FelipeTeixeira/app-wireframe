@@ -1,8 +1,6 @@
 <!--
-    - se nao tiver Wibx, exibir um item de saiba mais e um botao pagar na loja que muda aba dai
-    - saldo em Wibx no topo
-    - colocar termos de uso
     - tela de aplicar cupom
+    - colocar termos de uso
     - colocar menu dropdown pra lixeira
     - Colocar icone de informativo, ao clicar abrir modal falando detalhes
 -->
@@ -10,10 +8,18 @@
 
 <ActionBar class="action-bar">
 
-    <StackLayout orientation="horizontal" horizontalAlignment="left">
-        <Image src="res://icon_arrow_left" width="30" (tap)="backPage()" class="action-image"></Image>
-        <Label text="Escolha a forma de pagamento" marginLeft="12" verticalAlignment="center"  class="action-label"></Label>
-    </StackLayout>
+    <GridLayout columns="*, auto" rows="auto">
+        <StackLayout col="0" row="0" orientation="horizontal" horizontalAlignment="left">
+            <Image src="res://icon_arrow_left" width="30" (tap)="backPage()" class="action-image"></Image>
+            <Label text="Escolha a forma de pagamento" textWrap="true" marginLeft="12" verticalAlignment="center"  class="action-label"></Label>
+        </StackLayout>
+
+        <StackLayout col="1" row="0" class="action-bar-balance" horizontalAlignment="right">
+            <Label text="Saldo em Wibx"verticalAlignment="center"></Label>
+            <Label text="10000,00" verticalAlignment="center" class="action-bar-balance-val"></Label>
+        </StackLayout>
+
+    </GridLayout>
 
 </ActionBar>
 
@@ -36,10 +42,11 @@
 
         <StackLayout class="card text-center" margin="0 12">
 
+            <!-- SEM WIBX -->
             <StackLayout *ngIf="!isWibx && !isTabStore" class="notWibx">
 
                 <Image src="res://sad" width="50" margin="12 0"></Image>
-                
+
                 <Label text="Ops!" class="black"></Label>
 
                 <Label text="Você não tem saldo em Wibx"></Label>

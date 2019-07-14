@@ -1,7 +1,18 @@
 .action-bar {
     background: linear-gradient(262deg, #3aa7af, #38b88c);
-    font-size: 16;
+    font-size: 15;
     color: #FFF;
+}
+
+.action-bar-balance {
+    font-size: 9;
+    text-align: right;
+    margin-right: 12;
+}
+
+.action-bar-balance-val {
+    font-size: 12;
+    font-family: "Nunito_Black";
 }
 
 .page {

@@ -1,10 +1,18 @@
 <ActionBar class="action-bar">
 
-    <StackLayout orientation="horizontal" horizontalAlignment="left">
-        <Image src="res://icon_arrow_left" width="30" (tap)="backPage()" class="action-image"></Image>
-        <Label text="Carrinho" marginLeft="12" verticalAlignment="center" class="action-label"></Label>
-        <Label text="2" class="action-bar-count"></Label>
-    </StackLayout>
+    <GridLayout columns="*, auto" rows="auto">
+        <StackLayout col="0" row="0" orientation="horizontal" horizontalAlignment="left">
+            <Image src="res://icon_arrow_left" width="30" (tap)="backPage()" class="action-image"></Image>
+            <Label text="Carrinho" marginLeft="12" verticalAlignment="center" class="action-label"></Label>
+            <Label text="2" class="action-bar-count"></Label>
+        </StackLayout>
+
+        <StackLayout col="1" row="0" class="action-bar-balance" horizontalAlignment="right">
+            <Label text="Saldo em Wibx"verticalAlignment="center"></Label>
+            <Label text="10000,00" verticalAlignment="center" class="action-bar-balance-val"></Label>
+        </StackLayout>
+
+    </GridLayout>
 
 </ActionBar>
 
