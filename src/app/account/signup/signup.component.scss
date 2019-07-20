@@ -1,0 +1,91 @@
+/*
+Primeira tela
+    - Logo da WiBOO
+    - Olá Bem-vindo a WiBOO!
+    - Onde sua recomendação vale muito.
+    - Botão [CADASTRAR]
+    - Link: Já sou cadastrado
+
+Segunda tela (se clicar em “cadastrar”)
+    - Na WiBOO você terá uma carteira só sua
+    - Para cria-la para você precisamos de alguns dados.
+    - Abaixo os campos
+        - Nome
+        - CPF
+        - Selecione o País
+
+    - Botão [Próximo Passo]
+
+Terceira tela
+    - Muito bom.
+    - Agora vamos criar o seu acesso.
+    - Abaixo os campos
+    - E-mail
+    - Confirma email
+    - senha
+    - confirma senha
+    - Botão [Próximo Passo]
+
+Quarta tela
+    - Verificação
+    - Digite o código que enviamos para você por email.
+    - Não se esqueça que as vezes ele cai na caixa de Spam.
+    - Espaço para digitar os números (pode ser bem bonito como o do Ame Digital né)
+    - abaixo o link para reenviar código.
+Botão [Finalizar]
+
+Quinta e última tela.
+    - Parabéns!
+    - Sua conta está criada e você pode ganhar suas Wibx na área de “Fidelidade” Gerenciar suas Wibx em “Carteira” e usar como pagamento na área “Shopping”.
+    - Colocar os nossos 3 icones (os que estão no menu)
+    - Botão [Entrar]
+*/
+
+.action-bar {
+    background: linear-gradient(262deg, #3aa7af, #38b88c);
+
+    font-size: 15;
+    color: #FFF;
+}
+
+.header {
+    background: linear-gradient(262deg, #4e1b7c, #41155f);
+    color: #fff;
+    text-align: center;
+    padding: 24 16;
+
+    &-logo {
+        font-family: "Nunito_Black";
+        font-size: 32;
+    }
+
+    &-text {
+        font-size: 12;
+        height: 16;
+    }
+}
+
+.message {
+    font-size: 16;
+    text-align: center;
+    margin-top: 24;
+}
+
+.btn {
+    font-size: 16;
+    border-radius: 4;
+    background: linear-gradient(262deg,#3483fa,#0559d7);
+    color: #fff;
+    text-transform: none;
+    border-width: 1;
+    border-color: #3483fa;
+    width: 200;
+    margin-bottom: 16;
+    font-family: "Nunito_Light";
+
+    &-border {
+        background: #fff;
+        color: #3483fa;
+    }
+}
+

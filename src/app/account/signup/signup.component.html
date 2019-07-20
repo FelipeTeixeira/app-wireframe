@@ -1,0 +1,39 @@
+<!--
+<ActionBar class="action-bar">
+
+    <GridLayout columns="*, auto" rows="auto">
+        <StackLayout col="0" row="0" orientation="horizontal" horizontalAlignment="left">
+            <Image src="res://icon_arrow_left" width="30" (tap)="backPage()" class="action-image"></Image>
+            <Label text="Escolha a forma de pagamento" textWrap="true" marginLeft="12" verticalAlignment="center"  class="action-label"></Label>
+        </StackLayout>
+
+        <StackLayout col="1" row="0" class="action-bar-balance" horizontalAlignment="right">
+            <Label text="Saldo em Wibx"verticalAlignment="center"></Label>
+            <Label text="10000,00" verticalAlignment="center" class="action-bar-balance-val"></Label>
+        </StackLayout>
+
+    </GridLayout>
+
+</ActionBar>
+-->
+
+<ScrollView class="page" *ngIf="!loading">
+
+    <StackLayout>
+        <StackLayout class="header">
+            <Label text="Wiboo" class="header-logo" verticalAlignment="center"></Label>
+            <Label text="Olá Bem-vindo a Wiboo!" class="header-text"></Label>
+            <Label text="Onde sua recomendação vale muito." class="header-text"></Label>
+        </StackLayout>
+
+        <Label text="Para continuar, acesse a sua conta" class="message"></Label>
+
+        <StackLayout marginTop="12">
+            <Button text="Já sou cadastrado" class="btn"></Button>
+            <Button text="Criar minha conta" class="btn btn-border"></Button>
+        </StackLayout>
+    </StackLayout>
+
+
+
+</ScrollView>
