@@ -1,0 +1,789 @@
+{
+    "app_name": "Wiboo",
+    "title_activity_kimera": "Wiboo",
+    "food": "Bars & Restaurants",
+    "house": "House & Decor",
+    "services": "Beauty & Healthy",
+    "tourism": "Travel & Tourism",
+    "clothes": "Clothing & Acessories",
+    "autos": "Automobile & Services",
+    "eletronics": "Eletronics",
+    "others": "Others",
+    "experiences": "Experiences",
+    "bars-restaurants": "Bars & Restaurants",
+    "houses-furniture-decoration": "Houses, Furniture & Decoration",
+    "travel-tourism": "Travel & Tourism",
+    "clothing-acessories": "Clothing & Acessories",
+    "available-coupon": "You have a coupon available for this store.",
+    "headerTitle": {
+        "wallet": "Wallet Wibx"
+    },
+    "languages": {
+        "language": "Languages",
+        "english": "English",
+        "portuguese": "Portuguese",
+        "chinese": "Chinese"
+    },
+    "account": {
+        "createWiboo": "Create your WiBOO account",
+        "alreadyAccount": "Already have an account?",
+        "signIn": "Sign in",
+        "touchid": "Biometric Login",
+        "biometric-login": "Biometric Login",
+        "biometric-login-desc": "Touch your sensor to login.",
+        "loginWiboo": "Sign in to WiBOO",
+        "optional": "optional",
+        "notRegistered": "Don't have an account yet?",
+        "notVerified": "Already have an account and don't verified yet?",
+        "verifyAccount": "Verify an account",
+
+        "register": "Edit",
+        "continue": "Continue",
+        "password": {
+            "must": "Password must contain: ",
+            "lowercase": "A lowercase letter",
+            "upper": "An uppercase letter",
+            "number": "At least one number",
+            "size": "At least 8 characters",
+            "special": "At least one special character "
+        },
+        "menu": {
+            "account": "My Account",
+            "signup": "Sign Up",
+            "signin": "Sign In",
+            "edit": "Edit",
+            "enable-mfa": "Security",
+            "change-pw": "Change Password",
+            "logout": "Log out",
+            "hello": "Hello",
+            "balance": "Balance in Wibx",
+            "show-balance": "Show balance",
+            "hide-balance": "Hide balance"
+        },
+        "validation": {
+            "generic": "An error has occurred",
+            "name-required": "Name is required.",
+            "email-required": "Email is required.",
+            "email-invalid": "Email must be a valid address.",
+            "email-match": "The email confirmation must be identical.",
+            "oldPassword-required": "Your old password is required.",
+            "pass-required": "Your new password is required.",
+            "passw-required": "Password is required.",
+            "pass-length": "Your password must contain at least 8 characters.",
+            "notpassmatch": "The password confirmation must be identical.",
+            "pass-force": "Your password must contain one special character [-!@#$%^&*()_+.], uppercase letter, lowercase letter, a number and at least 8 characters.",
+            "secretcode-required": "Security Code is required.",
+            "pass-match": "The password confirmation must be identical.",
+            "cpf-required": "CPF number is required.",
+            "passport-required": "Passport number is required.",
+            "cognito": {
+                "user-not-exist": "User not found.",
+                "user-or-pass-incorr": "Incorrect user or password.",
+                "attemps-exceed": "Consecutive login failures exceeded. Please try again in 5 minutes.",
+                "user-not-confirmed": "User hasn't been verified. Please go to the registration screen and confirm your account.",
+                "exists": "An account with this email address already exists.",
+                "pass-len": "Your password must contain at least 8 characters.",
+                "invalid-secretcode": "Security code is invalid! Please try again.",
+                "id-combination-nfound": "This user combination could not be found.",
+                "confirmed": "This user has already been verified.",
+                "already-reg": "This record has already been found in our database. Please try another one.",
+                "invalid-cpf": "The entered CPF number is invalid.",
+                "mfa-secretcode-required": "This user has MFA enabled, and secret code has not been sent.",
+                "server-failed-token": "----------------",
+                "mfa-invalid-code": "Invalid code"
+            }
+        },
+        "fields": {
+            "name": "Name",
+            "email": "Email",
+            "confirm-email": "Confirm your email",
+            "pass": "Password",
+            "old-pass": "Old Password",
+            "new-pass": "New Password",
+            "mobile": "Mobile",
+            "confirm-pass": "Confirm your new password",
+            "secretcode": "Security code",
+            "cpf": "CPF number",
+            "passport": "Passport number",
+            "employeeCode": "Member Code",
+            "selectCountry": "Select Country",
+            "country": "Country"
+        },
+        "login": {
+            "message": {
+                "ln1": "Wibx Login",
+                "ln2": "Access your wallet to be able to buy and manage your Wibx."
+            },
+            "message-forgot": {
+                "ln1": "Forgot your password ?",
+                "ln2": "Reset your password",
+                "ln3": "Fill in your email in the field for instructions on how to recover your password.",
+                "ln4": "Enter your email to receive the instructions and create a new password."
+            },
+            "forgot-success": {
+                "ln1": "Your password has been changed successfully.",
+                "back": "Back to log in"
+            },
+            "forgot-verify": {
+                "ln1": "Please check the code sent to your email.",
+                "ln2": "Do not forget to look in your SPAM mail."
+            },
+            "login-desc-1": "Do you already have an account? If you do not, click on",
+            "login-desc-2": "Create an account",
+            "verify-account": "Check Account!",
+            "verify-send": "Send code",
+            "forgot": "I forgot my password",
+            "signup": "Create an account",
+            "signin": "Sign in!",
+            "tab": {
+                "now": "Sign in",
+                "create": "Create an account"
+            },
+            "or": "or"
+        },
+        "change-pw": {
+            "message": {
+                "ln1": "Change your Password",
+                "ln2": "Change your password here."
+            },
+            "success": {
+                "ln1": "Your password has been changed.",
+                "back": "Return to Wallet"
+            },
+            "change-btn": "Change Password"
+        },
+        "enable-mfa": {
+            "activate-btn": "Enable",
+            "instructions": "To activate multifactor authentication, you must enter your password again.",
+            "start": {
+                "qrcode": "",
+                "key-step-instruction": "Scan the QR Code or manually enter the key in the Google Authenticator or in the Authy application.",
+                "input-code-step-instruction": "To complete the activation, enter the security code."
+            },
+            "finish": {
+                "sucsess": "Multifactor authentication was enabled!"
+            }
+        },
+        "signup": {
+            "message": {
+                "ln1": "Wibx Registration",
+                "ln2": "Register to be able to buy.",
+                "ln3": "At the end of this registration, feel free to",
+                "ln4": "buy tokens and manage them."
+            },
+            "success": {
+                "ln1": "Thank you for registering! Your account has been verified!",
+                "ln2": "You are being redirected to your Wallet now..."
+            },
+            "verify": {
+                "ln1": "Please check your email the security code that we sent to you.",
+                "ln2": "Do not forget to look in your SPAM mail.",
+                "resend": "The security code was resent to your email.",
+                "resend-error": "Could not resend security code. Please try again later.",
+                "resend-link": "Resend Security Code",
+                "verify-btn": "Check Account!"
+            },
+            "disclaimer": {
+                "ln1": "By clicking on the 'Finish Registration' button, you agree to",
+                "terms": "our terms, conditions",
+                "ln2": "and our",
+                "privacy": "privacy policy"
+            },
+            "verify-account": "Check Account",
+            "terms": "Terms and Conditions",
+            "terms-file": "https://static.wibx.io/terms_en-us.pdf",
+            "privacy": "Privacy Policy",
+            "privacy-file": "https://static.wibx.io/privacy_en-us.pdf",
+            "send": "Finish Registration!"
+        },
+        "user-data": {
+            "title": "Wibx - Register",
+            "success": {
+                "ln1": "Your data was successfully changed!",
+                "ln2": "You are being redirected to Shopping now..."
+            },
+            "confirm": "Confirm"
+        }
+    },
+    "wallet": {
+        "copy": "Copy",
+        "transactions": {
+            "title": "Wibx Transactions",
+            "from": "From",
+            "to": "To",
+            "received": "Received",
+            "sent": "Sent",
+            "back": "Back",
+            "empty": "There is no transaction history.",
+            "nameexternal": "External Wallet"
+
+        },
+        "future": {
+            "title": "Blockchain",
+            "subtitle": "Soon the following values ​​will be synchronised with the Ethereum blockchain.",
+            "from": "From",
+            "to": "To",
+            "received": "Received",
+            "sent": "Sent",
+            "back": "Back",
+            "empty": "There is no future releases.",
+            "nameexternal": "Carteira Externa"
+        },
+        "engagements": {
+            "title": "Engagement History",
+            "subtitle": "The Wibx earned through engagements and not used within 3 months will be donated to social causes.",
+            "from": "From",
+            "to": "To",
+            "received": "Received",
+            "sent": "Sent",
+            "A": "Active",
+            "P": "Paused",
+            "D": "Disabled",
+            "back": "Back",
+            "empty": "There is no engagement history.",
+            "total": "Total Earnings",
+            "earnings": "Won by",
+            "likes": "Likes",
+            "first-shares": "Share",
+            "shares": "Shares",
+            "indications": "Indications"
+        },
+        "home": {
+            "title": "Your Wallet",
+            "balance": "Available Balance",
+            "shopping": "Shopping",
+            "quotation": "Current quote",
+            "shopping-info": "Enjoy our offers",
+            "fidelity": "Fidelity",
+            "fidelity-info": "Win your Wibx",
+            "transactions": "Transactions",
+            "transactions-info": "Transactions History",
+            "order": "Order",
+            "order-info": "My Orders",
+            "future": "Blockchain",
+            "future-info": "Future Releases",
+            "engagement": "Engagement",
+            "engagement-info": "Engagement History",
+            "receive": "Receive",
+            "receive-info": "Receive Funds",
+            "send": "Transfer",
+            "send-info": "Transfer Funds",
+            "internal-negative": "Internal Blockchain is not synchronised. This may take a few hours.",
+            "internal-positive": "Internal Blockchain is synchronised.",
+            "external-negative": "External Blockchain is not synchronised. This may take a few hours.",
+            "external-positive": "External Blockchain is synchronised."
+        },
+        "menu": {
+            "account": "My Account",
+            "home": "Home",
+            "signup": "Sign Up",
+            "signin": "Sign In",
+            "enable-mfa": "Security",
+            "logout": "Log out",
+            "language": "Language",
+            "changepw": "Change Password",
+            "register": "Edit",
+            "wallet": "Wallet",
+            "shopping": "Shopping",
+            "fidelity": "Fidelity",
+            "transactions": "Transactions",
+            "infoLegal": "Legal Information"
+        },
+        "receive": {
+            "title": "Receive Funds",
+            "main-instructions": "Share this address with others and they will be able to send Wibx directly to your wallet."
+        },
+        "send": {
+            "title": "Transfer Funds",
+            "btn": "Transfer",
+            "balance-external": "Available Balance",
+            "balance-internal": "Available Balance",
+            "value": "Enter how many Wibx you want to Transfer",
+            "to": "Transferring to",
+            "not-enough-balance": "You do not have enough balance for the amount entered.",
+            "firstStep": "Account",
+            "firstStep-help": "Enter the wallet of the person to which you wish to transfer.",
+            "invalid-addr": "Invalid Ethereum address.",
+            "missing-customer-to": "You need to tell which customer you want to transfer to.",
+            "secondStep": "Value",
+            "details": "Transfer Details",
+            "thirdStep": "Finish",
+            "continue": "Continue",
+            "transfer": "Transfer",
+            "withdrawal": "Withdrawal Tax: ",
+            "transaction": "Transaction Tax: ",
+            "withdrawal-calc": "Approximate Value",
+            "transaction-calc": "Approximate Tax",
+            "calc": "The above values may vary after the transaction request.",
+            "mfa-required": "For your safety before to perform this operation enable the multi-factor authentication",
+            "enable": "Enable",
+            "true": "Balance from Ethereum blockchain",
+            "false": "Balance from internal blockchain",
+            "description": "Transaction Description (optional)",
+            "addressWallet": "Address Wallet",
+            "rateWibx": "Rate Wibx",
+            "redirect": {
+                "ln1": "Your transaction was successfully processed.",
+                "ln2": "It might take a few hours to be synchronised in the Ethereum blockchain."
+            },
+            "error": {
+                "ln1": "Your transaction could not be processed.",
+                "ln2": "Please, try again later..."
+            }
+        },
+        "order": {
+            "title": "Orders",
+            "finished": "Finished",
+            "waiting_payment": "Request for Collection",
+            "waiting_withdrawal": "Request for Collection",
+            "request_withdrawal": "Waiting Store",
+            "potato": "You are close to finalizing your order, only needs the store to confirm the collection of the product.",
+            "cancelled": "Cancelled",
+            "products": "Products List",
+            "total": "Payment Summary",
+            "orderId": "Order Number:",
+            "enterpriseId": "Store:",
+            "monetary-value": "Monetary Amount",
+            "remaining-value": "Remaining Amount",
+            "wibx-value": "Wibx Amount",
+            "total-value": "Order Amount",
+            "confirm-collection": "Are you in the store collecting the product?",
+            "waiting_pt1": "Have you collected the product in the store?",
+            "waiting_pt2": "If yes, click on the button below.",
+            "date": "Order Date:",
+            "wibx": "Wibx amount",
+            "tax": "Tax",
+            "no": "No",
+            "monetary": "Monetary amount",
+            "withdrawal": "Request Collection",
+            "cancel": "Cancel order",
+            "empty": "There is no order history."
+        }
+    },
+    "shop": {
+      "store": {
+          "not-found": "Store not found.",
+          "offers": "Offers",
+          "rating": {
+              "error-form": {
+                  "comment-unfilled": "Please fill in the comment field."
+              },
+              "success": {
+                  "comment-register": "Comment successfully registered."
+              },
+              "error": {
+                  "comment-register": "Unable to save the store rating."
+              }
+          },
+          "products": "Products",
+          "comments": "Comments",
+          "listOf": "Product List of the Store"
+      },
+      "stores": {
+          "title": "Stores",
+          "error": "Unable to load stores data. Please try again."
+      },
+      "malls": {
+          "title": "Malls",
+          "error": "Unable to load malls data. Please try again."
+      },
+      "retail-chain": {
+          "title": "Organizations",
+          "error": "Unable to load organizations data. Please try again."
+      },
+      "product": {
+          "not-found": "Item not found.",
+          "coin-symbol": "R$",
+          "description": "Description",
+          "rules": "Rules",
+          "like": "Like",
+          "comment": "Comment",
+          "buy": "Buy",
+          "share": "Share",
+          "wibx-award": "Wibx Rewards",
+          "photos": "Photos",
+          "add-shopping-cart": "Add on trolley",
+          "quantity": "Quantity:",
+          "coupon": "Coupon",
+          "unavailable": "Unavailable",
+          "commentsAbout": "Product reviews",
+          "messages": {
+              "buy": {
+                  "error": "The item you've selected was not added to your trolley. Please try again.",
+                  "success": "The item was added to your trolley."
+              },
+              "comment": {
+                  "success": "Comment successfully registered.",
+                  "error": "Unable to register your comment. Please try again."
+              }
+          },
+          "by": "by",
+          "back": "Back to list"
+      },
+      "checkout": {
+          "cart": "Trolley",
+          "coin-symbol": "R$",
+          "WIBX": "Wibx",
+          "DISCOUNT": "Total Discount",
+          "MIX": "Wibx + Pay at the Store",
+          "CASH": "at the Store",
+          "by": "By",
+          "method": "Payment Methods",
+          "choose": "Choose payment method",
+          "rateWibx": "Wibx Rate",
+          "reminder": "Do not forget to check the store working hours, to collect the product.",
+          "rate": "Wibx Rate",
+          "resume": "Wibx Resume",
+          "value-wibx": "Wibx Value",
+          "continue": "Continue",
+          "payment-title": "Payment",
+          "tax-wibx": "Wibx Rate",
+          "quantity-unavailable": "The item has not been added to your trolley.",
+          "tax": "Wibx Rate to Pay: ",
+          "transaction": "Transaction Tax: ",
+          "total-wibx": "Wibx Total",
+          "resumeToPay": "Remaining amount to Pay",
+          "value-mon": "Total",
+          "safe": "Payment 100% Safe",
+          "value-rest": "Remaining amount",
+          "products": "Products",
+          "add-coupon": "You have a coupon available for this store. Apply coupon",
+          "not-enough": "You do not have enough balance for the amount entered",
+          "exceeds": "The maximum amount to pay with wibx is: ",
+          "delete-product": "Delete product",
+          "total": "Total",
+          "proceed-to-checkout": "Complete Reservation",
+          "address": "Collection Address: ",
+          "empty-cart": "Your trolley is empty",
+          "subtotal": "Subtotal",
+          "discount": "Discount",
+          "empty-cart-you": "How about coming back and checking exclusive products for you?!",
+          "btnNow": "Start shopping now",
+          "store": "Store",
+          "apply-coupon": {
+                "title": "Available Coupons",
+              "success": "Your coupon was applied!",
+              "apply-error": "Invalid coupon!",
+              "select": "Select: R$",
+              "error": "You already have a coupon applied to your trolley."
+          },
+          "onlyWibx": {
+            "total-pay": "Pay your full order",
+            "with": "with Wibx",
+            "balance": "Your available Wibx balance",
+            "tax": "Wibx Tax",
+            "subtotal": "Subtotal Wibx order",
+            "total": "Total Wibx Order",
+            "newbalance": "Your new balance will be ",
+            "choose": "Choose: Pay with Wibx"
+          },
+          "mix": {
+            "pay": "Pay a part with your Wibx",
+            "rest": "and the rest pay in the store.",
+            "input": "Enter the Amount to be paid in Wibx",
+            "rest2": "Remaining value ",
+            "pay2": "to be paid at the Store",
+            "choose": "Choose: Pay with Wibx and at the Store"
+          },
+          "store2": {
+            "pay": "Pague seu produto na",
+            "store": "retirada na loja",
+            "option": "If you want to make the payment in the store, just click on 'Choose: Pay in the Store' to reserve your order.",
+            "choose": "Choose: Pay in the Store"
+          },
+          "back": "Back to Cart",
+          "checkout-success": {
+            "title": "Congratulations!",
+            "message": "Successful purchase!",
+            "tip1": "See how the removal of the product in the establishment works.",
+            "tip2": "Go to",
+            "tip3": " My Orders ",
+            "tip4": "and click in 'Request Collection'",
+            "tip5": "Go to the store where you made the purchase and show the number of your order.",
+            "tip6": "If the value of the purchase has already been fully paid, it is only to receive your order with the attendant.",
+            "tip7": "How about returning and checking exclusive products for you?!",
+            "back": "Back to Home Page",
+            "or": "Or complete your purchases by clicking below",
+            "back2": "Back to Cart"
+          },
+          "checkout-error": {
+              "message": "Ops! There was a problem processing your payment!",
+              "back": "Back"
+          },
+          "wibx-payment": {
+              "title": "Wibx used to pay",
+              "enter": "Enter amount to pay with Wibx...",
+              "pay": "Use my Wibx balance",
+              "wbx": "WbX",
+              "tax": "Wibx Tax",
+              "notWibx": "You don't have enough Wibx balance!",
+              "btnFidelity": "Win Wibx now",
+              "withouBalance": "Share the products in your social networks and get more wibx."
+          },
+          "payment": {
+              "title": "Payment methods",
+              "CASH": "Pay on the spot",
+              "PAGSEGURO": "Pay with PagSeguro",
+              "CIELO": "Credit Card",
+              "PAYPAL": "Paypal"
+          }
+      },
+      "apply-coupon": {
+          "title": "Apply Discount",
+          "apply": "Apply",
+          "cancel": "Cancel"
+      },
+      "main-store": {
+          "stores": "Stores",
+          "comments": "Reviews",
+          "commentsAbout": "Reviews about the store"
+      },
+      "authenticate-dialog": {
+          "like": "Hi! To like, sign in with your account",
+          "comment": "Hi! To comment, sign in with your account",
+          "buy": "Hi! To buy, sign in with your account",
+          "signup": "New User",
+          "login": "I already have an account"
+      },
+      "confirm-dialog": {
+          "delete-message": "Do you really want to delete this item from your trolley?",
+          "confirm": "Confirm",
+          "cancel": "Cancel",
+          "attention": "Attention",
+          "exit-shopping-cart-message": "You have not completed any purchase, do you really want to exit the trolley?",
+          "exit-shopping-cart-yes": "Yes, exit",
+          "exit-shopping-cart-no": "No, stay on trolley"
+      },
+      "menu": {
+          "balance": "Balance in Wibx",
+          "account": "My Account",
+          "home": "Home",
+          "signup": "Sign Up",
+          "signin": "Sign In",
+          "enable-mfa": "Security",
+          "my-shopping": "My Orders",
+          "my-favorites": "My Favourites",
+          "stores": "Stores",
+          "malls": "Malls",
+          "retail-chains": "Organizations",
+          "wallet": "Wallet",
+          "logout": "Log out",
+          "language": "Language",
+          "changepw": "Change Password",
+          "register": "Edit",
+          "infoLegal": "Legal Information",
+          "shopping": "Shopping",
+          "fidelity": "Fidelity",
+          "transactions": "Transactions"
+      },
+      "header": {
+          "search": {
+              "message": "Search",
+              "sufix": " in "
+          }
+      },
+      "dialogComment": {
+          "title": "Add comment",
+          "comment": "Comment",
+          "enter": "Enter your comment...",
+          "cancel": "Cancel"
+      },
+      "dialogRating": {
+          "title": "Add Rating",
+          "comment": "Comment",
+          "enter": "Enter your rating...",
+          "cancel": "Cancel",
+          "note": "Note",
+          "add": "Add",
+          "remove": "Remove"
+      },
+      "shop-indication": {
+          "redirect": "You are being redirected",
+          "redirect-P": "Please wait a moment to view the product",
+          "redirect-A": "Please wait a moment to view the advertisement",
+          "btn": "View now"
+      }
+    },
+    "coupon": {
+      "title": "Coupon",
+      "ln1": "For each purchase made, get 1 coupon.",
+      "ln2": "Adding ",
+      "ln3": " coupons, get one in the amount of ",
+      "ln4": "Almost there! Now it's just missing",
+      "ln5": "coupons to earn a worth of "
+    },
+    "favorite": {
+      "title": "Favourite List"
+    },
+    "dialog": {
+        "mfa": {
+            "title": "Multifactor Authentication",
+            "subtitle-ln1": "To increase your safety, you must provide",
+            "subtitle-ln2": "your multifactor code to complete the transaction.",
+            "alert": "The target wallet is not a Wibx wallet, before continuing make sure it is compatible with the Wibx token.",
+            "alert-2": "Tokens sent to incompatible wallet are irreversibly lost.",
+            "cancel": "Cancel",
+            "confirm": "Complete",
+            "code": "Multifactor Code",
+            "not-allowed": "Not possible to authenticate."
+        },
+        "custom-mfa": {
+            "title": "Biometric Multifactor Authentication",
+            "description": "As your device supports biometric authentication, you can now enable strong authentication to do application login and perform transactions.",
+            "question": "Do you want to enable this feature now?",
+            "error": {
+                "fingerprint": {
+                    "generic": "An error has occurred reading your biometric hardware.",
+                    "cancelled": "You cancelled the biometric reading. Please try it again.",
+                    "not_available": "Your biometric hardware is not available.",
+                    "not_configured": "Your biometric hardware is not configured.",
+                    "not_recognized": "Your biometric hardware is not recognized."
+                },
+                "already-have": "User already have a custom login setup. This must be disabled by an system administrator. Please contact the support.",
+                "invalid-code": "Invalid code received for user",
+                "empty": "Please fill all screen fields."
+            },
+            "biometric-step-title": "Biometric Enroll",
+            "biometric-step": "Please confirm with your finger to enroll.",
+            "biometric-transfer-title": "Biometric Confirmation",
+            "biometric-transfer-desc": "Please confirm with your finger to transfer.",
+            "ya": "Enable",
+            "nope": "No"
+        }
+    },
+    "legal": {
+        "terms": "Terms of Use",
+        "privacy": "Privacy Policy"
+    },
+    "fidelity": {
+        "home": {
+            "shopping": "Shopping WiBOO",
+            "engagement-history": "Engagement History",
+            "favorite-brands": "Favourite Brands",
+            "most-recents": "Most Recents",
+            "best-rewards": "Best Rewards"
+        },
+        "product": {
+            "not-found": "Item not found.",
+            "coin-symbol": "R$",
+            "description": "Description",
+            "rules": "Rules",
+            "like": "Like",
+            "comment": "Comment",
+            "buy": "Buy",
+            "share": "Share",
+            "wibx-award": "Wibx Rewards",
+            "photos": "Photos",
+            "add-shopping-cart": "Add on trolley",
+            "quantity": "Quantity:",
+            "unavailable": "Unavailable",
+            "commentsAbout": "Product reviews",
+            "messages": {
+                "buy": {
+                    "error": "The item you've selected was not added to your trolley. Please try again.",
+                    "success": "The item was added to your trolley."
+                },
+                "comment": {
+                    "success": "Comment successfully registered.",
+                    "error": "Unable to register your comment. Please try again."
+                }
+            }
+        },
+        "menu": {
+            "account": "My Account",
+            "home": "Home",
+            "signup": "Sign Up",
+            "signin": "Sign In",
+            "enable-mfa": "Security",
+            "my-shopping": "My Shopping",
+            "my-favorites": "My Favourites",
+            "stores": "Stores",
+            "malls": "Malls",
+            "retail-chains": "Retail Chains",
+            "wallet": "Wallet",
+            "logout": "Log out",
+            "language": "Language",
+            "config": "Configurations",
+            "changepw": "Change Password",
+            "register": "Edit",
+            "shopping": "Shopping",
+            "fidelity": "Fidelity",
+            "transactions": "Transactions",
+            "infoLegal": "Legal Information"
+        },
+        "header": {
+            "home": "WiBOO Fidelity",
+            "item": "Advertisement",
+            "share": "Share and win WiBX",
+            "search": {
+                "message": "Search",
+                "sufix": " in "
+            }
+        },
+        "dialogComment": {
+            "title": "Add comment",
+            "comment": "Comment",
+            "enter": "Enter your comment...",
+            "cancel": "Cancel"
+        },
+        "dialogRating": {
+            "title": "Add Rating",
+            "comment": "Comment",
+            "enter": "Enter your rating...",
+            "cancel": "Cancel",
+            "note": "Note"
+        },
+        "authenticate-dialog": {
+            "like": "Hi! To like, sign in with your account",
+            "comment": "Hi! To comment, sign in with your account",
+            "buy": "Hi! To buy, sign in with your account",
+            "share": "Hi! To share, sign in with your account",
+            "brands": "Hi! To view your favourite brands, sign in with your account",
+            "signup": "New User",
+            "login": "I already have an account"
+        },
+        "engagements": {
+            "title": "Engagement History",
+            "subtitle": "Coins earned here, which are not used within 3 months will be donated to social causes.",
+            "from": "From",
+            "to": "To",
+            "received": "Received",
+            "sent": "Sent",
+            "A": "Active",
+            "P": "Paused",
+            "D": "Disabled",
+            "back": "Back",
+            "empty": "There is no engagement history.",
+            "total": "Total Earnings",
+            "earnings": "Won by",
+            "likes": "Likes",
+            "first-shares": "Share",
+            "shares": "Shares",
+            "indications": "Indications"
+        }
+    },
+    "share": {
+        "copy": "Copy Link",
+        "back": "You are being redirected to the home page.",
+        "shareTxt": "Earn Wibx!\n\nWibx is the Brazilian cryptocurrency that will revolutionise the exchange relationships between brands and consumers, transforming social networks users into digital influencers.\n\nThe coin will be the mean of exchange of the WiBOO ecosystem, that introduces the concept of “SHARED, RECEIVED, PURCHASED, EXCHANGED”: users are rewarded in Wibx for sharing in their social networks campaigns and offers that brands publish in the ecosystem. With that, users will be able to buy goods and services in the WiBOO marketplace or convert their coins into real currency in an exchange.\n\nWe reserved 20 million Wibx for free distribution aiming at strengthening the WiBOO ecosystem, rewarding users who sign up on our website and invite their friends. I’ve already signed up. How about you do the same?\n\nThis is my link:",
+        "shareTxtFacebook": "Earn Wibx!\n\nWibx is the cryptocurrency that revolutionises the exchange relationships and transforms social networks users into digital influencers.\n\nSHARE content from brands in your social networks, RECEIVE Wibx, EXCHANGE for products in the WiBOO marketplace, or for money in exchange.\n\nWe reserved 20 million Wibx for free distribution aiming at strengthening the ecosystem. Sign up and earn Wibx:",
+        "shareTxtTwitter": "Wibx is the cryptocurrency that revolutionises the exchange relationships and transforms social networks users into digital influencers. We reserved 20 million Wibx for strengthening the ecosystem. Sign up and earn Wibx:",
+        "twitterTokenError": "Not authorized to tweet. Please try again.",
+        "twitterSuccess": "Tweet successfully created",
+        "facebookSuccess": "Post successfully created",
+        "info": "Share on your partner networks and get Wibx",
+        "twitterNotInstalled": "Twitter app not found.",
+        "twitterLoginError": "Error on Twitter login/authorization. Please, try again.",
+        "twitterError": "Error on Tweet."
+    },
+    "twitterDialog": {
+        "title": "What's happening?",
+        "enter": "Type here",
+        "tweet": "Tweet",
+        "cancel": "Cancel"
+    },
+    "empty-list": {
+      "title": "No products found",
+      "text": "Please check your search and try again!"
+    }
+}

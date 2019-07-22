@@ -56,12 +56,23 @@ Quinta e última tela.
 
     &-logo {
         font-family: "Nunito_Black";
-        font-size: 32;
+        font-size: 42;
+        margin-bottom: 12;
     }
 
-    &-text {
-        font-size: 12;
-        height: 16;
+    &-min {
+        text-align: left;
+        padding: 16;
+    }
+
+    &-subtitle {
+        font-family: "Nunito_Black";
+        font-size: 28;
+    }
+
+    &-btnBack {
+        margin-left: -12;
+        padding: 8;
     }
 }
 
@@ -69,6 +80,24 @@ Quinta e última tela.
     font-size: 16;
     text-align: center;
     margin-top: 24;
+}
+
+.step {
+    &-body {
+        margin-top: 12;
+        padding: 24 16;
+    }
+}
+
+.input {
+    text-align: left;
+    color: #9faab7;
+    border-color: #eee;
+    border-width: 2;
+    border-radius: 4;
+    padding: 10;
+	font-size: 14;
+	margin-bottom: 24;
 }
 
 .btn {
@@ -87,5 +116,12 @@ Quinta e última tela.
         background: #fff;
         color: #3483fa;
     }
+
+    &-next {
+        font-size: 18;
+    }
 }
 
+.testa {
+    color: red;
+}

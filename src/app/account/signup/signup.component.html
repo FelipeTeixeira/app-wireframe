@@ -1,39 +1,185 @@
-<!--
-<ActionBar class="action-bar">
-
-    <GridLayout columns="*, auto" rows="auto">
-        <StackLayout col="0" row="0" orientation="horizontal" horizontalAlignment="left">
-            <Image src="res://icon_arrow_left" width="30" (tap)="backPage()" class="action-image"></Image>
-            <Label text="Escolha a forma de pagamento" textWrap="true" marginLeft="12" verticalAlignment="center"  class="action-label"></Label>
-        </StackLayout>
-
-        <StackLayout col="1" row="0" class="action-bar-balance" horizontalAlignment="right">
-            <Label text="Saldo em Wibx"verticalAlignment="center"></Label>
-            <Label text="10000,00" verticalAlignment="center" class="action-bar-balance-val"></Label>
-        </StackLayout>
-
-    </GridLayout>
-
-</ActionBar>
--->
-
 <ScrollView class="page" *ngIf="!loading">
 
-    <StackLayout>
+    <StackLayout *ngIf="isStep1">
         <StackLayout class="header">
             <Label text="Wiboo" class="header-logo" verticalAlignment="center"></Label>
-            <Label text="Olá Bem-vindo a Wiboo!" class="header-text"></Label>
-            <Label text="Onde sua recomendação vale muito." class="header-text"></Label>
+            <Label text="Olá Bem-vindo a Wiboo!"></Label>
+            <Label text="Onde sua recomendação vale muito."></Label>
         </StackLayout>
 
         <Label text="Para continuar, acesse a sua conta" class="message"></Label>
 
-        <StackLayout marginTop="12">
+        <StackLayout class="step-body">
             <Button text="Já sou cadastrado" class="btn"></Button>
             <Button text="Criar minha conta" class="btn btn-border"></Button>
         </StackLayout>
     </StackLayout>
 
+    <StackLayout *ngIf="isStep2">
+        <StackLayout class="header header-min">
 
+            <StackLayout horizontalAlignment="left" class="header-btnBack">
+                <Image src="res://icon_arrow_left" width="30" height="30"></Image>
+            </StackLayout>
+
+            <Label text="Vamos começar?" class="header-subtitle"></Label>
+            <Label text="É rapidinho" class="header-text"></Label>
+        </StackLayout>
+
+        <StackLayout class="step-body">
+            <TextField hint="Nome" class="input"></TextField>
+
+            <Label text="Selecione o País"></Label>
+            <TextField hint="País" class="input"></TextField>
+
+            <!-- PAÍS -->
+            <!--
+            <StackLayout class="select">
+                <FilterSelect
+                    height="100%"
+                    [items]="countries"
+                    multiple="false"
+                    (change)="onitemselected($event)"
+                    hint="Please select some items"
+                    modal_title="País"
+                    search_param="name"
+                    primary_key="code">
+                </FilterSelect>
+            </StackLayout>
+            -->
+
+            <TextField hint="CPF" class="input" keyboardType="number"></TextField>
+
+            <Button text="Continuar" class="btn btn-border btn-next" marginTop="34"></Button>
+
+        </StackLayout>
+    </StackLayout>
+
+
+    <StackLayout *ngIf="isStep3">
+        <StackLayout class="header header-min">
+
+            <StackLayout horizontalAlignment="left" class="header-btnBack">
+                <Image src="res://icon_arrow_left" width="30" height="30"></Image>
+            </StackLayout>
+
+            <Label text="Muito bom" class="header-subtitle"></Label>
+            <Label text="Agora vamos criar o seu acesso" class="header-text"></Label>
+        </StackLayout>
+
+        <StackLayout class="step-body">
+
+            <TextField
+                [hint]="'account.fields.email' | L"
+                keyboardType="email"
+                [(ngModel)]="email"
+                [editable]="!loading">
+            </TextField>
+
+            <TextField
+                [hint]="'account.fields.confirm-email' | L"
+                keyboardType="email"
+                [(ngModel)]="mailConfirmed"
+                (textChange)="confirmEmail($event)"
+                [editable]="!loading">
+            </TextField>
+
+            <Label
+                [text]="'account.validation.email-match' | L"
+                class="passwordMust-name"
+                *ngIf="!emailMatch">
+            </Label>
+
+            <TextField
+                [hint]="'account.fields.pass' | L"
+                secure="true"
+                [(ngModel)]="password"
+                (textChange)="validatePassword($event)"
+                [editable]="!loading">
+            </TextField>
+
+            <StackLayout class="passwordMust">
+
+                <Label
+                    class="passwordMust-name"
+                    [text]="'account.password.must' | L">
+                </Label>
+
+                <GridLayout columns="20, auto" rows="auto">
+                    <!-- ROW 0 -->
+                    <StackLayout col="0" row="0" horizontalAlignment="left" verticalAlignment="center">
+                        <ns-icon-password-must [status]="lower"></ns-icon-password-must>
+                    </StackLayout>
+
+                    <StackLayout col="1" row="0">
+                        <Label
+                            textWrap="true"
+                            [text]="'account.password.lowercase' | L"
+                            [ngClass]="{'testa': lower}">
+                        </Label>
+                    </StackLayout>
+
+
+                    <!-- ROW 1 -->
+                    <StackLayout col="0" row="1" horizontalAlignment="left" verticalAlignment="center">
+                        <ns-icon-password-must [status]="upper"></ns-icon-password-must>
+                    </StackLayout>
+
+                    <StackLayout col="1" row="1">
+                        <Label
+                            textWrap="true"
+                            [text]="'account.password.upper' | L"
+                            [ngClass]="{'testa': upper}">
+                        </Label>
+                    </StackLayout>
+
+
+                    <!-- ROW 2 -->
+                    <StackLayout col="0" row="2" horizontalAlignment="left" verticalAlignment="center">
+                        <ns-icon-password-must [status]="numbers"></ns-icon-password-must>
+                    </StackLayout>
+
+                    <Label
+                        col="1" row="2"
+                        textWrap="true"
+                        [text]="'account.password.number' | L"
+                        [ngClass]="{'testa': numbers}">
+                    </Label>
+
+                    <!-- ROW 3 -->
+                    <StackLayout col="0" row="3" horizontalAlignment="left" verticalAlignment="center">
+                        <ns-icon-password-must [status]="size"></ns-icon-password-must>
+                    </StackLayout>
+
+                    <Label
+                        col="1" row="3"
+                        textWrap="true"
+                        [text]="'account.password.size' | L"
+                        [ngClass]="{'testa': size}">
+                    </Label>
+
+                </GridLayout>
+
+                <Label
+                    textWrap="true"
+                    [ngClass]="{'testa': special}">
+                    <FormattedString>
+                        <Span text="{{'account.password.special' | L}}"></Span>
+                        <Span text="'[-!@#$%^*()_+.]'"></Span>
+                    </FormattedString>
+                </Label>
+
+            </StackLayout>
+
+            <TextField
+                [hint]="'account.fields.confirm-pass' | L"
+                secure="true"
+                [(ngModel)]="passwordConfirmed"
+                (textChange)="confirmPassword($event)"
+                [editable]="!loading">
+            </TextField>
+
+        </StackLayout>
+    </StackLayout>
 
 </ScrollView>
