@@ -122,6 +122,16 @@ Quinta e última tela.
     }
 }
 
-.testa {
-    color: red;
+.is-active {
+    color: #4daa5d;
+}
+
+.passwordMust {
+    font-size: 12;
+    margin-bottom: 20;
+
+    &-name {
+        font-size: 12;
+        margin-bottom: 4;
+    }
 }

@@ -70,6 +70,7 @@
         <StackLayout class="step-body">
 
             <TextField
+                class="input"
                 [hint]="'account.fields.email' | L"
                 keyboardType="email"
                 [(ngModel)]="email"
@@ -77,6 +78,7 @@
             </TextField>
 
             <TextField
+                class="input"
                 [hint]="'account.fields.confirm-email' | L"
                 keyboardType="email"
                 [(ngModel)]="mailConfirmed"
@@ -91,6 +93,8 @@
             </Label>
 
             <TextField
+                marginBottom="8"
+                class="input"
                 [hint]="'account.fields.pass' | L"
                 secure="true"
                 [(ngModel)]="password"
@@ -105,19 +109,19 @@
                     [text]="'account.password.must' | L">
                 </Label>
 
-                <GridLayout columns="20, auto" rows="auto">
+                <GridLayout columns="20, auto" rows="22, 22, 22, 22, 22">
                     <!-- ROW 0 -->
                     <StackLayout col="0" row="0" horizontalAlignment="left" verticalAlignment="center">
                         <ns-icon-password-must [status]="lower"></ns-icon-password-must>
                     </StackLayout>
 
-                    <StackLayout col="1" row="0">
-                        <Label
-                            textWrap="true"
-                            [text]="'account.password.lowercase' | L"
-                            [ngClass]="{'testa': lower}">
-                        </Label>
-                    </StackLayout>
+                    <Label
+                        col="1" row="0"
+                        verticalAlignment="center"
+                        textWrap="true"
+                        [text]="'account.password.lowercase' | L"
+                        [ngClass]="{'is-active': lower}">
+                    </Label>
 
 
                     <!-- ROW 1 -->
@@ -125,13 +129,13 @@
                         <ns-icon-password-must [status]="upper"></ns-icon-password-must>
                     </StackLayout>
 
-                    <StackLayout col="1" row="1">
-                        <Label
-                            textWrap="true"
-                            [text]="'account.password.upper' | L"
-                            [ngClass]="{'testa': upper}">
-                        </Label>
-                    </StackLayout>
+                    <Label
+                        col="1" row="1"
+                        verticalAlignment="center"
+                        textWrap="true"
+                        [text]="'account.password.upper' | L"
+                        [ngClass]="{'is-active': upper}">
+                    </Label>
 
 
                     <!-- ROW 2 -->
@@ -141,9 +145,10 @@
 
                     <Label
                         col="1" row="2"
+                        verticalAlignment="center"
                         textWrap="true"
                         [text]="'account.password.number' | L"
-                        [ngClass]="{'testa': numbers}">
+                        [ngClass]="{'is-active': numbers}">
                     </Label>
 
                     <!-- ROW 3 -->
@@ -153,25 +158,33 @@
 
                     <Label
                         col="1" row="3"
+                        verticalAlignment="center"
                         textWrap="true"
                         [text]="'account.password.size' | L"
-                        [ngClass]="{'testa': size}">
+                        [ngClass]="{'is-active': size}">
+                    </Label>
+
+                    <StackLayout col="0" row="4" horizontalAlignment="left" verticalAlignment="center">
+                        <ns-icon-password-must [status]="special"></ns-icon-password-must>
+                    </StackLayout>
+
+                    <Label
+                        col="1" row="4"
+                        verticalAlignment="center"
+                        textWrap="true"
+                        [ngClass]="{'is-active': special}">
+                        <FormattedString>
+                            <Span text="{{'account.password.special' | L}}"></Span>
+                            <Span text="'[-!@#$%^*()_+.]'"></Span>
+                        </FormattedString>
                     </Label>
 
                 </GridLayout>
 
-                <Label
-                    textWrap="true"
-                    [ngClass]="{'testa': special}">
-                    <FormattedString>
-                        <Span text="{{'account.password.special' | L}}"></Span>
-                        <Span text="'[-!@#$%^*()_+.]'"></Span>
-                    </FormattedString>
-                </Label>
-
             </StackLayout>
 
             <TextField
+                class="input"
                 [hint]="'account.fields.confirm-pass' | L"
                 secure="true"
                 [(ngModel)]="passwordConfirmed"
