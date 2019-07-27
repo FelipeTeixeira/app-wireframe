@@ -1,0 +1,224 @@
+<ScrollView class="page" *ngIf="!loading">
+
+    <StackLayout *ngIf="isStep1">
+        <StackLayout class="header">
+            <Label text="WiBOO" class="header-logo" verticalAlignment="center"></Label>
+            <Label text="Olá Bem-vindo a WiBOO!"></Label>
+            <Label text="Onde sua recomendação vale muito."></Label>
+        </StackLayout>
+
+        <StackLayout marginTop="36">
+            <Label text="Uma só conta para" class="message"></Label>
+            <Label text="todos os produtos WiBOO" class="message"></Label>
+        </StackLayout>
+
+        <StackLayout class="step-body">
+            <Button text="Já sou cadastrado" class="btn"></Button>
+            <Button text="Criar minha conta" (tap)="step1Next()" class="btn btn-border"></Button>
+        </StackLayout>
+    </StackLayout>
+
+    <StackLayout *ngIf="isStep2">
+        <StackLayout class="header header-min">
+
+            <StackLayout horizontalAlignment="left" class="header-btnBack" (tap)="step1Previous()">
+                <Image src="res://icon_arrow_left" width="30" height="30"></Image>
+            </StackLayout>
+
+            <Label text="Vamos lá?" class="header-subtitle"></Label>
+            <Label text="É super rápido" class="header-text"></Label>
+
+        </StackLayout>
+
+        <StackLayout class="step-body">
+            <TextField hint="Nome" class="input"></TextField>
+
+            <Label text="Selecione o País"></Label>
+            <TextField hint="País" class="input"></TextField>
+
+            <!-- PAÍS -->
+            <!--
+            <StackLayout class="select">
+                <FilterSelect
+                    height="100%"
+                    [items]="countries"
+                    multiple="false"
+                    (change)="onitemselected($event)"
+                    hint="Please select some items"
+                    modal_title="País"
+                    search_param="name"
+                    primary_key="code">
+                </FilterSelect>
+            </StackLayout>
+            -->
+
+            <TextField hint="CPF" class="input" keyboardType="number"></TextField>
+
+            <Button text="Continuar" (tap)="step2Next()" class="btn btn-border btn-next" marginTop="34"></Button>
+
+        </StackLayout>
+    </StackLayout>
+
+
+    <StackLayout *ngIf="isStep3">
+        <StackLayout class="header header-min">
+
+            <StackLayout horizontalAlignment="left" class="header-btnBack" (tap)="step2Previous()">
+                <Image src="res://icon_arrow_left" width="30" height="30"></Image>
+            </StackLayout>
+
+            <Label text="Muito bom" class="header-subtitle"></Label>
+            <Label text="Agora vamos criar o seu acesso" class="header-text"></Label>
+        </StackLayout>
+
+        <StackLayout class="step-body">
+
+            <TextField
+                class="input"
+                [hint]="'account.fields.email' | L"
+                keyboardType="email"
+                [(ngModel)]="email"
+                [editable]="!loading">
+            </TextField>
+
+            <TextField
+                class="input"
+                [hint]="'account.fields.confirm-email' | L"
+                keyboardType="email"
+                [(ngModel)]="mailConfirmed"
+                (textChange)="confirmEmail($event)"
+                [editable]="!loading">
+            </TextField>
+
+            <Label
+                [text]="'account.validation.email-match' | L"
+                class="passwordMust-name"
+                *ngIf="!emailMatch">
+            </Label>
+
+            <GridLayout columns="*, auto" marginBottom="8">
+                <TextField
+                    col="0"
+                    [secure]="isSecure"
+                    marginBottom="0"
+                    class="input input-add"
+                    [hint]="'account.fields.pass' | L"
+                    [(ngModel)]="password"
+                    (textChange)="validatePassword($event)"
+                    [editable]="!loading">
+                </TextField>
+
+                <FlexboxLayout alignItems="center" (tap)="toggleSecure()" col="1" verticalAlignment="center" class="input-icon">
+                    <Image src="res://icon_visibility" *ngIf="!isSecure"></Image>
+                    <Image src="res://icon_visibility_off" *ngIf="isSecure"></Image>
+                </FlexboxLayout>
+            </GridLayout>
+
+            <StackLayout class="passwordMust">
+
+                <Label
+                    class="passwordMust-name"
+                    [text]="'account.password.must' | L">
+                </Label>
+
+                <GridLayout columns="*, *" rows="22, 22">
+                    <!-- ROW 0 -->
+                    <FlexboxLayout col="0" row="0" alignItems="center">
+                        <StackLayout horizontalAlignment="left" verticalAlignment="center">
+                            <ns-icon-password-must [status]="lower"></ns-icon-password-must>
+                        </StackLayout>
+
+                        <Label
+                            verticalAlignment="center"
+                            textWrap="true"
+                            [text]="'account.password.lowercase' | L"
+                            [ngClass]="{'is-active': lower}">
+                        </Label>
+                    </FlexboxLayout>
+
+                    <FlexboxLayout col="1" row="0" alignItems="center">
+                        <StackLayout horizontalAlignment="left" verticalAlignment="center">
+                            <ns-icon-password-must [status]="upper"></ns-icon-password-must>
+                        </StackLayout>
+
+                        <Label
+                            verticalAlignment="center"
+                            textWrap="true"
+                            [text]="'account.password.upper' | L"
+                            [ngClass]="{'is-active': upper}">
+                        </Label>
+                    </FlexboxLayout>
+
+                    <!-- ROW 1 -->
+                    <FlexboxLayout col="0" row="1" alignItems="center">
+                        <StackLayout horizontalAlignment="left" verticalAlignment="center">
+                            <ns-icon-password-must [status]="numbers"></ns-icon-password-must>
+                        </StackLayout>
+
+                        <Label
+                            verticalAlignment="center"
+                            textWrap="true"
+                            [text]="'account.password.number' | L"
+                            [ngClass]="{'is-active': numbers}">
+                        </Label>
+                    </FlexboxLayout>
+
+                    <FlexboxLayout col="1" row="1" alignItems="center">
+                        <StackLayout col="0" row="3" horizontalAlignment="left" verticalAlignment="center">
+                            <ns-icon-password-must [status]="size"></ns-icon-password-must>
+                        </StackLayout>
+
+                        <Label
+                            col="1" row="3"
+                            verticalAlignment="center"
+                            textWrap="true"
+                            [text]="'account.password.size' | L"
+                            [ngClass]="{'is-active': size}">
+                        </Label>
+                    </FlexboxLayout>
+
+                </GridLayout>
+
+
+                <FlexboxLayout alignItems="center">
+                    <StackLayout horizontalAlignment="left" verticalAlignment="center">
+                        <ns-icon-password-must [status]="special"></ns-icon-password-must>
+                    </StackLayout>
+
+                    <Label
+                        verticalAlignment="center"
+                        textWrap="true"
+                        [ngClass]="{'is-active': special}">
+                        <FormattedString>
+                            <Span text="{{'account.password.special' | L}}"></Span>
+                            <Span text="'[-!@#$%^*()_+.]'"></Span>
+                        </FormattedString>
+                    </Label>
+                </FlexboxLayout>
+
+            </StackLayout>
+
+            <GridLayout columns="*, auto" marginBottom="8">
+                <TextField
+                    col="0"
+                    [secure]="isSecure"
+                    marginBottom="0"
+                    class="input input-add"
+                    [hint]="'account.fields.confirm-pass' | L"
+                    [(ngModel)]="passwordConfirmed"
+                    (textChange)="confirmPassword($event)"
+                    [editable]="!loading">
+                </TextField>
+
+                <FlexboxLayout alignItems="center" (tap)="toggleSecure()" col="1" verticalAlignment="center" class="input-icon">
+                    <Image src="res://icon_visibility" *ngIf="!isSecure"></Image>
+                    <Image src="res://icon_visibility_off" *ngIf="isSecure"></Image>
+                </FlexboxLayout>
+            </GridLayout>
+
+            <Button text="Criar conta" marginTop="16" class="btn" (tap)="toggleSecure()"></Button>
+
+        </StackLayout>
+
+    </StackLayout>
+</ScrollView>

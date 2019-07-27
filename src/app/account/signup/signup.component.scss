@@ -1,0 +1,139 @@
+/*
+
+<!--
+    ver etapa de colocar numero de email
+-->
+
+
+Quarta tela
+    - Verificação
+    - Digite o código que enviamos para você por email.
+    - Não se esqueça que as vezes ele cai na caixa de Spam.
+    - Espaço para digitar os números (pode ser bem bonito como o do Ame Digital né)
+    - abaixo o link para reenviar código.
+Botão [Finalizar]
+
+Quinta e última tela.
+    - Parabéns!
+    - Sua conta está criada e você pode ganhar suas Wibx na área de “Fidelidade” Gerenciar suas Wibx em “Carteira” e usar como pagamento na área “Shopping”.
+    - Colocar os nossos 3 icones (os que estão no menu)
+    - Botão [Entrar]
+*/
+
+.action-bar {
+    background: linear-gradient(262deg, #3aa7af, #38b88c);
+
+    font-size: 15;
+    color: #FFF;
+}
+
+.header {
+    background: linear-gradient(262deg, #4e1b7c, #41155f);
+    color: #fff;
+    text-align: center;
+    padding: 24 16;
+
+    &-logo {
+        font-family: "Nunito_Black";
+        font-size: 42;
+        margin-bottom: 12;
+    }
+
+    &-min {
+        text-align: left;
+        padding: 16;
+    }
+
+    &-subtitle {
+        font-family: "Nunito_Black";
+        font-size: 28;
+    }
+
+    &-btnBack {
+        margin-left: -12;
+        padding: 8;
+    }
+}
+
+.message {
+    font-size: 20;
+    text-align: center;
+}
+
+.step {
+    &-body {
+        margin-top: 12;
+        padding: 24 16;
+    }
+}
+
+.input {
+    text-align: left;
+    color: #9faab7;
+    border-color: #eee;
+    border-width: 2;
+    border-radius: 4;
+    padding: 10;
+    font-size: 14;
+    height: 42;
+    margin-bottom: 24;
+
+    &-add {
+        border-right-width: 0;
+        border-radius: 4 0 0 4;
+    }
+
+    &-icon {
+        border-color: #eee;
+        border-width: 2;
+        border-left-width: 0;
+        border-radius: 0 4 4 0;
+        height: 42;
+        padding: 0 12;
+        display: flex;
+        align-items: center;
+
+        Image {
+            width: 24;
+            height: 24;
+        }
+    }
+
+}
+
+.btn {
+    font-size: 16;
+    border-radius: 4;
+    background: linear-gradient(262deg,#3483fa,#0559d7);
+    background: linear-gradient(262deg, #4e1b7c, #41155f);
+    border-color: #41155f;
+    color: #fff;
+    text-transform: none;
+    border-width: 1;
+    width: 200;
+    margin-bottom: 16;
+    font-family: "Nunito_Light";
+
+    &-border {
+        background: #fff;
+        color: #41155f;
+    }
+
+    &-next {
+        font-size: 18;
+    }
+}
+
+.is-active {
+    color: #4daa5d;
+}
+
+.passwordMust {
+    font-size: 12;
+    margin-bottom: 20;
+
+    &-name {
+        font-size: 12;
+        margin-bottom: 4;
+    }
+}

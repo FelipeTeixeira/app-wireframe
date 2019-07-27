@@ -7,6 +7,7 @@ import { ItemsComponent } from "./item/items.component";
 import { ItemDetailComponent } from "./item/item-detail.component";
 import { CheckoutPaymentComponent } from './checkout-payment/checkout-payment.component';
 import { CheckoutHowWorksComponent } from './checkout-how-works/checkout-how-works.component';
+import { AccountModule } from "./account/account.module";
 
 // Uncomment and add to NgModule imports if you need to use two-way binding
 // import { NativeScriptFormsModule } from "nativescript-angular/forms";
@@ -20,7 +21,8 @@ import { CheckoutHowWorksComponent } from './checkout-how-works/checkout-how-wor
     ],
     imports: [
         NativeScriptModule,
-        AppRoutingModule
+        AppRoutingModule,
+        AccountModule
     ],
     declarations: [
         AppComponent,
