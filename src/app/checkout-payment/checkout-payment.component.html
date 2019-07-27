@@ -1,30 +1,24 @@
 <!--
-    - texto de escolher no lugar da seta
-    - se nao tiver Wibx, exibir um item de saiba mais e um botao pagar na loja que muda aba dai
     - colocar termos de uso
-
-    - criar branch e mandar pull request, pra saber as diferenças tdas
-
-
-
     - colocar menu dropdown pra lixeira
     - Colocar icone de informativo, ao clicar abrir modal falando detalhes
-    - Formas
-        Pague pelo app
-        Pague na entrega
-        https://files.slack.com/files-pri/T0GPLQSTX-FLDMU4RSA/image.png
-
-    Resumo do pedido
-        https://lh4.googleusercontent.com/gO07J325lQruOY_BiuNIPnz5BI7w57UatMqpzrvwtw5-cgs9b0VwN_kAzkwkw7-HPatp-cNSfohg-zuf9FNzD9FF7v4xBPB8UoIAA57J=s2003
 -->
 
 
 <ActionBar class="action-bar">
 
-    <StackLayout orientation="horizontal" horizontalAlignment="left">
-        <Image src="res://icon_arrow_left" width="30" (tap)="backPage()" class="action-image"></Image>
-        <Label text="Escolha forma de pagamento" marginLeft="12" verticalAlignment="center"  class="action-label"></Label>
-    </StackLayout>
+    <GridLayout columns="*, auto" rows="auto">
+        <StackLayout col="0" row="0" orientation="horizontal" horizontalAlignment="left">
+            <Image src="res://icon_arrow_left" width="30" (tap)="backPage()" class="action-image"></Image>
+            <Label text="Escolha a forma de pagamento" textWrap="true" marginLeft="12" verticalAlignment="center"  class="action-label"></Label>
+        </StackLayout>
+
+        <StackLayout col="1" row="0" class="action-bar-balance" horizontalAlignment="right">
+            <Label text="Saldo em Wibx"verticalAlignment="center"></Label>
+            <Label text="10000,00" verticalAlignment="center" class="action-bar-balance-val"></Label>
+        </StackLayout>
+
+    </GridLayout>
 
 </ActionBar>
 
@@ -47,8 +41,20 @@
 
         <StackLayout class="card text-center" margin="0 12">
 
+            <!-- SEM WIBX -->
+            <StackLayout *ngIf="!isWibx && !isTabStore" class="notWibx">
+
+                <Image src="res://sad" width="50" margin="12 0"></Image>
+
+                <Label text="Ops!" class="black"></Label>
+
+                <Label text="Você não tem saldo em Wibx"></Label>
+                <Label textWrap="true" text="Compartilhe em suas redes sociais produtos ou anúncios de grandes empresas e ganhe Wibx."></Label>
+            </StackLayout>
+
+
             <!-- PAGAR CM WIBX -->
-            <ng-container *ngIf="isTabWibx">
+            <ng-container *ngIf="isTabWibx && isWibx">
                 <Image src="res://icon_wibx_purple" stretch="fill" width="50" marginBottom="4"></Image>
                 <Label text="Pague sua compra integral"></Label>
                 <Label text="com Wibx"></Label>
@@ -75,7 +81,7 @@
             </ng-container>
 
             <!-- WIBX + LOJA -->
-            <ng-container *ngIf="isTabWibxStore">
+            <ng-container *ngIf="isTabWibxStore && isWibx">
 
                 <FlexboxLayout justifyContent="center" marginBottom="4">
                     <Image src="res://icon_wibx_purple" stretch="fill" width="50"></Image>

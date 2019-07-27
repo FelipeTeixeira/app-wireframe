@@ -5,12 +5,14 @@ import { Routes } from "@angular/router";
 import { ItemsComponent } from "./item/items.component";
 import { ItemDetailComponent } from "./item/item-detail.component";
 import { CheckoutPaymentComponent } from "./checkout-payment/checkout-payment.component";
+import { CheckoutHowWorksComponent } from "./checkout-how-works/checkout-how-works.component";
 
 const routes: Routes = [
     // { path: "", redirectTo: "/checkout-payment", pathMatch: "full" },
-    { path: "", redirectTo: "/items", pathMatch: "full" },
+    { path: "", redirectTo: "/success", pathMatch: "full" },
     { path: "items", component: ItemsComponent },
     { path: "checkout-payment", component: CheckoutPaymentComponent },
+    { path: "success", component: CheckoutHowWorksComponent },
 ];
 
 @NgModule({
