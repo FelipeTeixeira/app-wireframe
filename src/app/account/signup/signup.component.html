@@ -96,15 +96,23 @@
                 *ngIf="!emailMatch">
             </Label>
 
-            <TextField
-                marginBottom="8"
-                class="input"
-                [hint]="'account.fields.pass' | L"
-                secure="true"
-                [(ngModel)]="password"
-                (textChange)="validatePassword($event)"
-                [editable]="!loading">
-            </TextField>
+            <GridLayout columns="*, auto" marginBottom="8">
+                <TextField
+                    col="0"
+                    [secure]="isSecure"
+                    marginBottom="0"
+                    class="input input-add"
+                    [hint]="'account.fields.pass' | L"
+                    [(ngModel)]="password"
+                    (textChange)="validatePassword($event)"
+                    [editable]="!loading">
+                </TextField>
+
+                <FlexboxLayout alignItems="center" (tap)="toggleSecure()" col="1" verticalAlignment="center" class="input-icon">
+                    <Image src="res://icon_visibility" *ngIf="!isSecure"></Image>
+                    <Image src="res://icon_visibility_off" *ngIf="isSecure"></Image>
+                </FlexboxLayout>
+            </GridLayout>
 
             <StackLayout class="passwordMust">
 
@@ -112,7 +120,6 @@
                     class="passwordMust-name"
                     [text]="'account.password.must' | L">
                 </Label>
-
 
                 <GridLayout columns="*, *" rows="22, 22">
                     <!-- ROW 0 -->
@@ -191,20 +198,27 @@
 
             </StackLayout>
 
-            <TextField
-                class="input"
-                [hint]="'account.fields.confirm-pass' | L"
-                [secure]="isSecure"
-                [(ngModel)]="passwordConfirmed"
-                (textChange)="confirmPassword($event)"
-                [editable]="!loading">
-            </TextField>
+            <GridLayout columns="*, auto" marginBottom="8">
+                <TextField
+                    col="0"
+                    [secure]="isSecure"
+                    marginBottom="0"
+                    class="input input-add"
+                    [hint]="'account.fields.confirm-pass' | L"
+                    [(ngModel)]="passwordConfirmed"
+                    (textChange)="confirmPassword($event)"
+                    [editable]="!loading">
+                </TextField>
 
-            <Label text="mostrar senha" class="show-hide-text" (tap)="toggleSecure()"></Label>
+                <FlexboxLayout alignItems="center" (tap)="toggleSecure()" col="1" verticalAlignment="center" class="input-icon">
+                    <Image src="res://icon_visibility" *ngIf="!isSecure"></Image>
+                    <Image src="res://icon_visibility_off" *ngIf="isSecure"></Image>
+                </FlexboxLayout>
+            </GridLayout>
 
             <Button text="Cadastrar" class="btn" (tap)="toggleSecure()"></Button>
 
         </StackLayout>
-    </StackLayout>
 
+    </StackLayout>
 </ScrollView>

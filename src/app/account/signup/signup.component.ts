@@ -11,7 +11,7 @@ export class SignupComponent implements OnInit {
     isStep1 = true;
     isStep2 = false;
     isStep3 = false;
-    isSecure = false;
+    isSecure = true;
 
     public hide: any;
     public countries: Array<any>;
@@ -138,5 +138,4 @@ export class SignupComponent implements OnInit {
     toggleSecure() {
         this.isSecure = !this.isSecure;
     }
-    // https://github.com/NativeScript/NativeScript/issues/4626
 }
