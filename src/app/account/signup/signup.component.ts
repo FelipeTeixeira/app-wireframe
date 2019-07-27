@@ -8,9 +8,10 @@ import { Page } from 'tns-core-modules/ui/page/page';
     moduleId: module.id,
 })
 export class SignupComponent implements OnInit {
-    isStep1 = false;
+    isStep1 = true;
     isStep2 = false;
-    isStep3 = true;
+    isStep3 = false;
+    isSecure = false;
 
     public hide: any;
     public countries: Array<any>;
@@ -113,4 +114,29 @@ export class SignupComponent implements OnInit {
             this.special = false;
         }
     }
+
+    step1Previous() {
+        this.isStep1 = true
+        this.isStep2 = false;
+    }
+
+    step1Next() {
+        this.isStep1 = false
+        this.isStep2 = true;
+    }
+
+    step2Previous() {
+        this.isStep2 = true;
+        this.isStep3 = false;
+    }
+
+    step2Next() {
+        this.isStep2 = false;
+        this.isStep3 = true;
+    }
+
+    toggleSecure() {
+        this.isSecure = !this.isSecure;
+    }
+    // https://github.com/NativeScript/NativeScript/issues/4626
 }

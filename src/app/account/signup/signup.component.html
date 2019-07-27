@@ -7,23 +7,27 @@
             <Label text="Onde sua recomendação vale muito."></Label>
         </StackLayout>
 
-        <Label text="Para continuar, acesse a sua conta" class="message"></Label>
+        <StackLayout marginTop="36">
+            <Label text="Uma só conta para" class="message"></Label>
+            <Label text="todos os produtos Wiboo" class="message"></Label>
+        </StackLayout>
 
         <StackLayout class="step-body">
             <Button text="Já sou cadastrado" class="btn"></Button>
-            <Button text="Criar minha conta" class="btn btn-border"></Button>
+            <Button text="Criar minha conta" (tap)="step1Next()" class="btn btn-border"></Button>
         </StackLayout>
     </StackLayout>
 
     <StackLayout *ngIf="isStep2">
         <StackLayout class="header header-min">
 
-            <StackLayout horizontalAlignment="left" class="header-btnBack">
+            <StackLayout horizontalAlignment="left" class="header-btnBack" (tap)="step1Previous()">
                 <Image src="res://icon_arrow_left" width="30" height="30"></Image>
             </StackLayout>
 
-            <Label text="Vamos começar?" class="header-subtitle"></Label>
-            <Label text="É rapidinho" class="header-text"></Label>
+            <Label text="Vamos lá?" class="header-subtitle"></Label>
+            <Label text="É super rápido" class="header-text"></Label>
+
         </StackLayout>
 
         <StackLayout class="step-body">
@@ -50,7 +54,7 @@
 
             <TextField hint="CPF" class="input" keyboardType="number"></TextField>
 
-            <Button text="Continuar" class="btn btn-border btn-next" marginTop="34"></Button>
+            <Button text="Continuar" (tap)="step2Next()" class="btn btn-border btn-next" marginTop="34"></Button>
 
         </StackLayout>
     </StackLayout>
@@ -59,7 +63,7 @@
     <StackLayout *ngIf="isStep3">
         <StackLayout class="header header-min">
 
-            <StackLayout horizontalAlignment="left" class="header-btnBack">
+            <StackLayout horizontalAlignment="left" class="header-btnBack" (tap)="step2Previous()">
                 <Image src="res://icon_arrow_left" width="30" height="30"></Image>
             </StackLayout>
 
@@ -109,67 +113,72 @@
                     [text]="'account.password.must' | L">
                 </Label>
 
-                <GridLayout columns="20, auto" rows="22, 22, 22, 22, 22">
+
+                <GridLayout columns="*, *" rows="22, 22">
                     <!-- ROW 0 -->
-                    <StackLayout col="0" row="0" horizontalAlignment="left" verticalAlignment="center">
-                        <ns-icon-password-must [status]="lower"></ns-icon-password-must>
-                    </StackLayout>
+                    <FlexboxLayout col="0" row="0" alignItems="center">
+                        <StackLayout horizontalAlignment="left" verticalAlignment="center">
+                            <ns-icon-password-must [status]="lower"></ns-icon-password-must>
+                        </StackLayout>
 
-                    <Label
-                        col="1" row="0"
-                        verticalAlignment="center"
-                        textWrap="true"
-                        [text]="'account.password.lowercase' | L"
-                        [ngClass]="{'is-active': lower}">
-                    </Label>
+                        <Label
+                            verticalAlignment="center"
+                            textWrap="true"
+                            [text]="'account.password.lowercase' | L"
+                            [ngClass]="{'is-active': lower}">
+                        </Label>
+                    </FlexboxLayout>
 
+                    <FlexboxLayout col="1" row="0" alignItems="center">
+                        <StackLayout horizontalAlignment="left" verticalAlignment="center">
+                            <ns-icon-password-must [status]="upper"></ns-icon-password-must>
+                        </StackLayout>
+
+                        <Label
+                            verticalAlignment="center"
+                            textWrap="true"
+                            [text]="'account.password.upper' | L"
+                            [ngClass]="{'is-active': upper}">
+                        </Label>
+                    </FlexboxLayout>
 
                     <!-- ROW 1 -->
-                    <StackLayout col="0" row="1" horizontalAlignment="left" verticalAlignment="center">
-                        <ns-icon-password-must [status]="upper"></ns-icon-password-must>
-                    </StackLayout>
+                    <FlexboxLayout col="0" row="1" alignItems="center">
+                        <StackLayout horizontalAlignment="left" verticalAlignment="center">
+                            <ns-icon-password-must [status]="numbers"></ns-icon-password-must>
+                        </StackLayout>
 
-                    <Label
-                        col="1" row="1"
-                        verticalAlignment="center"
-                        textWrap="true"
-                        [text]="'account.password.upper' | L"
-                        [ngClass]="{'is-active': upper}">
-                    </Label>
+                        <Label
+                            verticalAlignment="center"
+                            textWrap="true"
+                            [text]="'account.password.number' | L"
+                            [ngClass]="{'is-active': numbers}">
+                        </Label>
+                    </FlexboxLayout>
+
+                    <FlexboxLayout col="1" row="1" alignItems="center">
+                        <StackLayout col="0" row="3" horizontalAlignment="left" verticalAlignment="center">
+                            <ns-icon-password-must [status]="size"></ns-icon-password-must>
+                        </StackLayout>
+
+                        <Label
+                            col="1" row="3"
+                            verticalAlignment="center"
+                            textWrap="true"
+                            [text]="'account.password.size' | L"
+                            [ngClass]="{'is-active': size}">
+                        </Label>
+                    </FlexboxLayout>
+
+                </GridLayout>
 
 
-                    <!-- ROW 2 -->
-                    <StackLayout col="0" row="2" horizontalAlignment="left" verticalAlignment="center">
-                        <ns-icon-password-must [status]="numbers"></ns-icon-password-must>
-                    </StackLayout>
-
-                    <Label
-                        col="1" row="2"
-                        verticalAlignment="center"
-                        textWrap="true"
-                        [text]="'account.password.number' | L"
-                        [ngClass]="{'is-active': numbers}">
-                    </Label>
-
-                    <!-- ROW 3 -->
-                    <StackLayout col="0" row="3" horizontalAlignment="left" verticalAlignment="center">
-                        <ns-icon-password-must [status]="size"></ns-icon-password-must>
-                    </StackLayout>
-
-                    <Label
-                        col="1" row="3"
-                        verticalAlignment="center"
-                        textWrap="true"
-                        [text]="'account.password.size' | L"
-                        [ngClass]="{'is-active': size}">
-                    </Label>
-
-                    <StackLayout col="0" row="4" horizontalAlignment="left" verticalAlignment="center">
+                <FlexboxLayout alignItems="center">
+                    <StackLayout horizontalAlignment="left" verticalAlignment="center">
                         <ns-icon-password-must [status]="special"></ns-icon-password-must>
                     </StackLayout>
 
                     <Label
-                        col="1" row="4"
                         verticalAlignment="center"
                         textWrap="true"
                         [ngClass]="{'is-active': special}">
@@ -178,19 +187,22 @@
                             <Span text="'[-!@#$%^*()_+.]'"></Span>
                         </FormattedString>
                     </Label>
-
-                </GridLayout>
+                </FlexboxLayout>
 
             </StackLayout>
 
             <TextField
                 class="input"
                 [hint]="'account.fields.confirm-pass' | L"
-                secure="true"
+                [secure]="isSecure"
                 [(ngModel)]="passwordConfirmed"
                 (textChange)="confirmPassword($event)"
                 [editable]="!loading">
             </TextField>
+
+            <Label text="mostrar senha" class="show-hide-text" (tap)="toggleSecure()"></Label>
+
+            <Button text="Cadastrar" class="btn" (tap)="toggleSecure()"></Button>
 
         </StackLayout>
     </StackLayout>

@@ -1,30 +1,14 @@
 /*
-Primeira tela
-    - Logo da WiBOO
-    - Olá Bem-vindo a WiBOO!
-    - Onde sua recomendação vale muito.
-    - Botão [CADASTRAR]
-    - Link: Já sou cadastrado
 
-Segunda tela (se clicar em “cadastrar”)
-    - Na WiBOO você terá uma carteira só sua
-    - Para cria-la para você precisamos de alguns dados.
-    - Abaixo os campos
-        - Nome
-        - CPF
-        - Selecione o País
+<!--
+    falta deixar as senhas alinhadas
+    botao de exibir senha
+    ver etapa de colocar numero de email
+    olhar frases
+-->
 
-    - Botão [Próximo Passo]
+            <!-- Crie a sua conta única para todos os produtos Globo -->
 
-Terceira tela
-    - Muito bom.
-    - Agora vamos criar o seu acesso.
-    - Abaixo os campos
-    - E-mail
-    - Confirma email
-    - senha
-    - confirma senha
-    - Botão [Próximo Passo]
 
 Quarta tela
     - Verificação
@@ -77,9 +61,8 @@ Quinta e última tela.
 }
 
 .message {
-    font-size: 16;
+    font-size: 20;
     text-align: center;
-    margin-top: 24;
 }
 
 .step {
@@ -104,17 +87,18 @@ Quinta e última tela.
     font-size: 16;
     border-radius: 4;
     background: linear-gradient(262deg,#3483fa,#0559d7);
+    background: linear-gradient(262deg, #4e1b7c, #41155f);
+    border-color: #41155f;
     color: #fff;
     text-transform: none;
     border-width: 1;
-    border-color: #3483fa;
     width: 200;
     margin-bottom: 16;
     font-family: "Nunito_Light";
 
     &-border {
         background: #fff;
-        color: #3483fa;
+        color: #41155f;
     }
 
     &-next {
