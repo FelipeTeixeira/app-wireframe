@@ -3,6 +3,47 @@
     <StackLayout *ngIf="isStep1">
         <StackLayout class="header">
             <Label text="WiBOO" class="header-logo" verticalAlignment="center"></Label>
+            <Label text="Parabéns!" class="success-message"></Label>
+            <Label text="Sua conta está criada" class="success-message-sub"></Label>
+        </StackLayout>
+
+        <StackLayout class="step-body">
+            <StackLayout marginTop="36">
+
+                <Label textWrap="true" class="success-text">
+                    <FormattedString>
+                        <Span text="Você pode ganhar suas Wibx na área de "></Span>
+                        <Span text="Fidelidade" class="bold fidelity-button"></Span>
+                        <Span text=", gerenciar em sua "></Span>
+                        <Span text="Carteira " class="bold wallet-button"></Span>
+                        <Span text="e utilizar como forma de pagamento no "></Span>
+                        <Span text="Shopping" class="bold shopping-button"></Span>
+                    </FormattedString>
+                </Label>
+
+                <Label text="Acesse agora:" class="success-text" fontSize="16" marginTop="16"></Label>
+
+                <FlexboxLayout justifyContent="center">
+                    <!-- TO DO deixar com safeSrc -->
+
+                    <StackLayout class="nav-item fidelity-button" verticalAlignment="middle" horizontalAlignment="center" (tap)="navigateUrl('/fidelity')">
+                        <Image src="res://icon_fidelity" class="nav-item-image"></Image>
+                    </StackLayout>
+                    <StackLayout class="nav-item wallet-button" verticalAlignment="middle" horizontalAlignment="center" (tap)="navigateUrl('/wallet')">
+                        <Image src="res://icon_wallet" class="nav-item-image"></Image>
+                    </StackLayout>
+                    <StackLayout class="nav-item shopping-button" verticalAlignment="middle" horizontalAlignment="center" (tap)="navigateUrl('/shopping')">
+                        <Image src="res://icon_shop" width="30" height="30" class="nav-item-image"></Image>
+                    </StackLayout>
+                </FlexboxLayout>
+
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+
+    <StackLayout *ngIf="!isStep1">
+        <StackLayout class="header">
+            <Label text="WiBOO" class="header-logo" verticalAlignment="center"></Label>
             <Label text="Olá Bem-vindo a WiBOO!"></Label>
             <Label text="Onde sua recomendação vale muito."></Label>
         </StackLayout>

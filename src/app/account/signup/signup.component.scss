@@ -137,3 +137,47 @@ Quinta e última tela.
         margin-bottom: 4;
     }
 }
+
+// pegar daqui o codigo
+.success {
+    &-message {
+        font-size: 24;
+    }
+
+    &-message-sub {
+        font-size: 20;
+    }
+
+    &-text {
+        font-size: 18;
+        padding: 0 16;
+        text-align: center;
+    }
+}
+
+.nav-item {
+    width: 50;
+    height: 50;
+    border-radius: 4;
+    margin: 16 12;
+
+    &-image {
+        width: 30;
+        height: 30;
+    }
+}
+
+.shopping-button {
+    background: linear-gradient(262deg, #3aa7af, #38b88c);
+    color: #38b88c;
+}
+
+.fidelity-button {
+    background: linear-gradient(262deg, #ff7854, #fd267d);
+    color: #fd267d;
+}
+
+.wallet-button {
+    background: linear-gradient(262deg, #5b3395, #4d1b7a);
+    color: #4d1b7a;
+}
